@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import * as DataCleaner from './Utils/Cleaners/';
+
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    DataCleaner.cleanMovieData();    
+  }
   render() {
     return (
       <div className="App">
