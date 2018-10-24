@@ -1,17 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import MovieCard from '../Components/MovieCard';
 
-const MovieContainer = () => {
+const MovieContainer = ({movies}) => {
   
+  const cards = movies.map((movie) => {
+    return <MovieCard key={movie.id} {...movie} />
+  })
+
   return (
     <div className='movie-container'>
-      
+      { cards }
     </div>
   )
 }
 
-MovieContainer.propTypes = {
-
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies
+  }
 }
 
-export default MovieContainer
+export default connect(mapStateToProps)(MovieContainer);
