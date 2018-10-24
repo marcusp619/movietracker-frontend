@@ -6,8 +6,9 @@ import './App.css';
 
 class App extends Component {
 
-  componentDidMount() {
-    DataCleaner.cleanMovieData();    
+  async componentDidMount() {
+    const data = await DataCleaner.cleanMovieData(); 
+    console.log(data)   
   }
   render() {
     return (

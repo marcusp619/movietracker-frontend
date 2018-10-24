@@ -1,4 +1,4 @@
-export default = {
+export default {
     "results": [
         {
             "vote_count": 1515,
