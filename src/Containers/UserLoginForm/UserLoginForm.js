@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class UserLoginForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
       email: '',
-      password:
+      password: '',
     }
   }
 
