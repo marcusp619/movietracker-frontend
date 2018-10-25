@@ -5,7 +5,7 @@ import './App.css';
 import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 import { addMovies } from './Actions'
-import NewUserForm from './Containers/NewUserForm/NewUserForm';
+import NewUserForm from './Components/NewUserForm/NewUserForm';
 
 class App extends Component {
 
