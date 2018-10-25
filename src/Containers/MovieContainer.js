@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './MovieContainer.css';
 import MovieCard from '../Components/MovieCard';
 
 const MovieContainer = ({movies}) => {
