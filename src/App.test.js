@@ -5,9 +5,11 @@ import { shallow } from 'enzyme';
 
 describe('App', () => {
   let wrapper;
+  let mockStore
 
   beforeEach(() => {
-    wrapper = shallow(<App />)
+    mockStore = { getState: jest.fn(), subscribe: jest.fn(), dispatch: jest.fn() }
+    wrapper = shallow(<App store={mockStore} />)
   })
 
   it('should match the snapshot', () => {
