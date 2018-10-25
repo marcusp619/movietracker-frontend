@@ -10,13 +10,18 @@ class NewUserForm extends Component {
     }
   }
 
-  const handleSubmit = (e) => {
+  handleChange = (e) => {
     const { name, value } = e.target
-    const { handleSubmit } = this.props
     this.setState({ [name]: value })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault()
+
+  }
+
   render() {
+    const { handleSubmit } = this.props
     const { name, email, password } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
@@ -24,27 +29,25 @@ class NewUserForm extends Component {
           name="name" 
           className="user-name-input" 
           value={name}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+          placeholder="Enter Full Name" />
         <input 
           name="email" 
           className="user-email-input" 
           value={email}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+          placeholder="Enter Email Address" />
         <input 
           name="password" 
           className="user-password-input" 
           value={password}
-          onChange={this.handleChange} />
+          onChange={this.handleChange}
+          placeholder="Enter Password" />
         <button>Submit</button>
       </form>
     )
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  handleSubmit: (name, email, password) => ({
-    dispatch(newUser(name, email, password))
-  })
-}
 
-export default connect (null, mapDispatchToProps)(NewUserForm)
+export default NewUserForm;
