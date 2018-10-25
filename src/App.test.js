@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('App', () => {
+  let wrapper;
+  let mockStore
+
+  beforeEach(() => {
+    mockStore = { getState: jest.fn(), subscribe: jest.fn(), dispatch: jest.fn() }
+    wrapper = shallow(<App store={mockStore} />)
+  })
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+})

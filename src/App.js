@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import * as DataCleaner from './Utils/Cleaners/';
+import MovieContainer from './Containers/MovieContainer';
 import './App.css';
+import { connect } from 'react-redux'
+import { addMovies } from './Actions'
 
 class App extends Component {
+
+  async componentDidMount() {
+    const movieInfo = await DataCleaner.cleanMovieData();
+    this.props.addMovies(movieInfo)
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
+        <MovieContainer />
       </div>
     );
   }
+
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addMovies: (movieInfo) => {
+      dispatch(addMovies(movieInfo))
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
