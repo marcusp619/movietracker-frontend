@@ -7,8 +7,23 @@ export const fetchMovies = async() => {
   return result;
 }
 
-export const postNewUser = async(newUserInfo) => {
-  fetch('http://localhost:3000/api/users/new', newUserInfo)
+export const postNewUser = async (newUserInfo) => {
+  fetch('http://localhost:3000/api/users/new',{ 
+    method: "POST",
+    body: JSON.stringify(newUserInfo),
+    headers:{'Content-Type': 'application/json'},
+  })
+  .then(res => res.json())
+  .then(response => console.log('Success:', JSON.stringify(response)))
+  .catch(error => console.error('Error:', error));
+}
+
+export const fetchUser = async (userInfo) => {
+  fetch('http://localhost:3000/api/users',{
+	method: "POST",
+	body: JSON.stringify(userInfo),
+	headers:{'Content-Type': 'application/json'},
+  })
   .then(res => res.json())
   .then(response => console.log('Success:', JSON.stringify(response)))
   .catch(error => console.error('Error:', error));
