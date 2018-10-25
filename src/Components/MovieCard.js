@@ -10,7 +10,7 @@ const MovieCard = (props) => {
       <p>{props.overview}</p>
       <p>{props.vote_average}</p>
     </div>
-  )
+  );
 }
 
 export default MovieCard;

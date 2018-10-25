@@ -14,7 +14,7 @@ export const cleanMovieData = async () => {
       backdrop_path: `${backdropURL}${backdrop_path}`,
       release_date, 
       vote_average, 
-      overview
+      overview,
     }
   });
 }
