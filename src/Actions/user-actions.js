@@ -7,14 +7,14 @@ export const newUser = (name, email, password) => ({
 
 export const signInUser = ({user}) => ({
   type: 'SIGN_IN_USER',
-  name,
-  favorites,
+  name: user.email,
+  favorites: user.favorites
 });
 
 export const signOutUser = ({user}) => ({
   type: 'SIGN_OUT_USER',
-  name,
-  favorites,
+  name: user.email,
+  favorites: user.favorites
 });
 
 export const toggleUserStatus = (status) => ({

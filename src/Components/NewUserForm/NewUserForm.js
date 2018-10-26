@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as API from '../../Utils/API';
 
 class NewUserForm extends Component {
   constructor(props) {
@@ -17,11 +18,10 @@ class NewUserForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-
+    API.postNewUser(this.state)
   }
 
   render() {
-    const { handleSubmit } = this.props
     const { name, email, password } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
@@ -39,6 +39,7 @@ class NewUserForm extends Component {
           placeholder="Enter Email Address" />
         <input 
           name="password" 
+          type="password"
           className="user-password-input" 
           value={password}
           onChange={this.handleChange}
