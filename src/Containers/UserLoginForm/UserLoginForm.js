@@ -39,8 +39,8 @@ class UserLoginForm extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  handleSubmit: (email, password) => {
-    dispatch()
+  handleSubmit: ({email, password}) => {
+    dispatch(signInUser(this.state))
   }
 })
 
