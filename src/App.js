@@ -18,6 +18,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="title-container">
+          <span className="app-title">
+            <span className="inner-app-title">MovieTracker</span>
+          </span>
+        </div>
         <Route exact path='/newuser' component={NewUserForm} />
         <Route exact path='/' component={MovieContainer} />
         <Route exact path='/login' component={UserLoginForm} />
