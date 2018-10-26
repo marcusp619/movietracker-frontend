@@ -18,7 +18,7 @@ export const postNewUser = async (newUserInfo) => {
   .catch(error => console.error('Error:', error));
 }
 
-export const fetchUser = async (userInfo) => {
+export const signInUser= async (userInfo) => {
   fetch('http://localhost:3000/api/users',{
 	method: "POST",
 	body: JSON.stringify(userInfo),
