@@ -1,8 +1,11 @@
-const users = (state=[], action) => {
+const users = (state={}, action) => {
   switch(action.type) {
-    case 'NEW_USER':
-      return 
+    case 'SIGN_IN_USER':
+      return {name: action.name, favorites: action.favorites};
+    case 'SIGN_OUT_USER':
+      return {};
     default:
       return state;
   }
 }
+

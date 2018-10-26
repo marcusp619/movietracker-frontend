@@ -5,9 +5,16 @@ export const newUser = (name, email, password) => ({
   password,
 });
 
-export const fetchUser = (status) => ({
-  type: 'FETCH_USER',
-  status,
+export const signInUser = ({user}) => ({
+  type: 'SIGN_IN_USER',
+  name,
+  favorites,
+});
+
+export const signOutUser = ({user}) => ({
+  type: 'SIGN_OUT_USER',
+  name,
+  favorites,
 });
 
 export const toggleUserStatus = (status) => ({
