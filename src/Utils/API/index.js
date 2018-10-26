@@ -10,7 +10,7 @@ export const fetchMovies = async() => {
 export const postNewUser = async (newUserInfo) => {
   fetch('http://localhost:3000/api/users/new',{ 
     method: "POST",
-    body: JSON.stringify(newUserInfo),
+    body: JSON.stringify({...newUserInfo, favorites: []}),
     headers:{'Content-Type': 'application/json'},
   })
   .then(res => res.json())
