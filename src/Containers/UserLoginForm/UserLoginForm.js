@@ -21,14 +21,8 @@ class UserLoginForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    // try {
       const fetchedUser = await API.checkUser(this.state)
-      console.log(fetchedUser)
-      this.props.userSignIn(this.state) 
-    // }
-    // catch(error) {
-      // console.log(error.message)
-    // }
+      this.props.userSignIn(fetchedUser) 
   }
 
   render() {
@@ -57,7 +51,7 @@ class UserLoginForm extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
   userSignIn: (user) => {
-    dispatch((user) => signInUser(user))
+    dispatch(signInUser(user))
   }
 })
 
