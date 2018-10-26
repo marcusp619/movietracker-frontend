@@ -1,32 +1,98 @@
 .App {
   text-align: center;
+  background: #000;
+  color: #CFCFCD;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.title-container {
+  height: 20em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #F5C21B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ECF0EF), to(#474954));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 7em;
+  font-weight: 900;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 2
 }
 
-.App-link {
-  color: #61dafb;
+.app-title::before
+{
+  background-position: -180px;
+  -webkit-animation: flare 5s infinite;
+  -webkit-animation-timing-function: linear;
+  background-image: linear-gradient(65deg, transparent 20%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 27%, transparent 27%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "MovieTracker";
+  color: #FFF;
+  display: block;
+  padding-right: 140px;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-title::after
+{
+  content: "MovieTracker";
+  color: #FFF;
+  display: block;
+  position: absolute;
+  text-shadow: 0 1px #FFF, 0 2px #FFF, 0 3px #FFF, 0 4px #FFF, 0 5px #7ea8be, 0 6px #7ea8be, 0 7px #7ea8be, 0 8px #7ea8be, 0 9px #7ea8be, 0 10px #7ea8be;
+  top: 0;
+  z-index: -1;
 }
+
+.inner-app-title::after, .inner-app-title::before
+{
+    -webkit-animation: sparkle 5s infinite;
+  -webkit-animation-timing-function: linear;
+  background: #FFF;
+  border-radius: 100%;
+  box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 25px #FFF, 0 0 30px #FFF, 0 0 35px #FFF;
+  content: "";
+  display: block;
+  height: 10px;
+  opacity: 0.7;
+  position: absolute;
+  width: 10px;
+}
+
+.inner-app-title::before
+{
+  -webkit-animation-delay: 0.2s;
+  height: 7px;
+  left: 0.05em;
+  top: 0.9em;
+  width: 7px;
+}
+
+.inner-app-title::after
+{
+  top: 0.3em;
+  right: 0.075em;
+}
+
+@-webkit-keyframes flare
+{
+  0%   { background-position: -180px; }
+  30%  { background-position: 800px; }
+  100% { background-position: 800px; }
+}
+
+@-webkit-keyframes sparkle
+{
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  40%  { opacity: 0.8; }
+  60%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
