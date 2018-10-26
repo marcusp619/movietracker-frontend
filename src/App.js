@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 import { addMovies } from './Actions'
 import NewUserForm from './Components/NewUserForm/NewUserForm';
+import UserLoginForm from './Containers/UserLoginForm/UserLoginForm';
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
       <div className="App">
         <Route exact path='/newuser' component={NewUserForm} />
         <Route exact path='/' component={MovieContainer} />
+        <Route exact path='/login' component={UserLoginForm} />
       </div>
     );
   }
