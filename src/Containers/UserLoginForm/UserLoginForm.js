@@ -28,6 +28,7 @@ class UserLoginForm extends Component {
           placeholder="Enter Email Address" />
         <input 
           className="user-password-login"
+          type="password"
           name="password"
           value={value}
           onChange={this.handleChange}
