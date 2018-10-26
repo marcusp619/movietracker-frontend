@@ -18,13 +18,14 @@ export const postNewUser = (newUserInfo) => {
   .catch(error => console.error('Error:', error));
 }
 
-export const signInUser= (userInfo) => {
+export const checkUser = (userInfo) => {
+  console.log(userInfo)
   fetch('http://localhost:3000/api/users',{
 	method: "POST",
 	body: JSON.stringify(userInfo),
 	headers:{'Content-Type': 'application/json'},
   })
   .then(res => res.json())
-  .then(response => console.log('Success:', JSON.stringify(response)))
+  .then(response => console.log('Success', JSON.stringify(response)))
   .catch(error => console.error('Error:', error));
 }

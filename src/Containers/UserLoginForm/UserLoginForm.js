@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { signInUser } from '../../Actions/user-actions';
 import { connect } from 'react-redux';
+import * as API from '../../Utils/API/'
 
 class UserLoginForm extends Component {
   constructor(props) {
@@ -17,11 +18,23 @@ class UserLoginForm extends Component {
     this.setState({ [name]: value })
   }
 
+  handleSubmit = async (e) => {
+    e.preventDefault()
+    // try {
+      const fetchedUser = await API.checkUser(this.state)
+      console.log(fetchedUser)
+      this.props.userSignIn(this.state) 
+    // }
+    // catch(error) {
+      // console.log(error.message)
+    // }
+  }
+
   render() {
-    const { handleSubmit } = this.props
+    // const { handleSubmit } = this.props
     const { email, value } = this.state
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <input
           className="user-email-login" 
           name="email"
@@ -42,8 +55,8 @@ class UserLoginForm extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  handleSubmit: ({ email, password, favorites }) => {
-    dispatch(({ email, password, favorites }) => signInUser(this.state))
+  userSignIn: (user) => {
+    dispatch((user) => signInUser(user))
   }
 })
 
