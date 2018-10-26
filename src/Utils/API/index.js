@@ -7,7 +7,7 @@ export const fetchMovies = async() => {
   return result;
 }
 
-export const postNewUser = async (newUserInfo) => {
+export const postNewUser = (newUserInfo) => {
   fetch('http://localhost:3000/api/users/new',{ 
     method: "POST",
     body: JSON.stringify({...newUserInfo, favorites: []}),
@@ -18,7 +18,7 @@ export const postNewUser = async (newUserInfo) => {
   .catch(error => console.error('Error:', error));
 }
 
-export const signInUser= async (userInfo) => {
+export const signInUser= (userInfo) => {
   fetch('http://localhost:3000/api/users',{
 	method: "POST",
 	body: JSON.stringify(userInfo),

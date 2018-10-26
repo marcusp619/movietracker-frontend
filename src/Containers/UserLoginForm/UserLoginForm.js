@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { signInUser } from '../../Actions/user-actions';
 import { connect } from 'react-redux';
 
 class UserLoginForm extends Component {
@@ -7,6 +8,7 @@ class UserLoginForm extends Component {
     this.state = {
       email: '',
       password: '',
+      favorites: []
     }
   }
 
@@ -39,8 +41,8 @@ class UserLoginForm extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  handleSubmit: ({email, password}) => {
-    dispatch(signInUser(this.state))
+  handleSubmit: ({ email, password, favorites }) => {
+    dispatch(({ email, password, favorites }) => signInUser(this.state))
   }
 })
 
