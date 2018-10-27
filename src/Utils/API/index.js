@@ -27,6 +27,6 @@ export const checkUser = async (userInfo) => {
 	headers:{'Content-Type': 'application/json'},
   })
   const result = await response.json()
-  const { name, password, email } = result.data
-  return { name, password, email }
+  const { name, email, id } = result.data
+  return { name, email, id }
 }
