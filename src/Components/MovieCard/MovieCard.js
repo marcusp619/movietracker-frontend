@@ -38,7 +38,7 @@ class MovieCard extends Component {
       return (
         <div className='movie-card'>
           <img 
-            className='star-icon' 
+            className='fav-star-icon' 
             onClick={this.handleClick}
             src={solidStar} 
             alt='Favorite not selected' 
