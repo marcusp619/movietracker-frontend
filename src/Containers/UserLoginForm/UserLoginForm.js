@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { signInUser } from '../../Actions/user-actions';
 import { connect } from 'react-redux';
-import * as API from '../../Utils/API/'
+import * as API from '../../Utils/API/';
 
 class UserLoginForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
       email: '',
-      password: '',
-      favorites: []
+      password: ''
     }
   }
 
@@ -25,7 +24,6 @@ class UserLoginForm extends Component {
   }
 
   render() {
-    // const { handleSubmit } = this.props
     const { email, value } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
@@ -48,10 +46,14 @@ class UserLoginForm extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  user: state.user
+})
+
 const mapDispatchToProps = (dispatch) => ({
   userSignIn: (user) => {
     dispatch(signInUser(user))
   }
 })
 
-export default connect(null, mapDispatchToProps)(UserLoginForm)
+export default connect(mapStateToProps, mapDispatchToProps)(UserLoginForm)
