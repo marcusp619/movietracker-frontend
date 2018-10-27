@@ -12,45 +12,22 @@
 
 .app-title
 {
-  color: #F5C21B;
   background: -webkit-gradient(linear, left top, left bottom, from(#ECF0EF), to(#066168));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-size: 7em;
   font-weight: 900;
-  position: relative;
   text-transform: uppercase;
   text-shadow: 6px 0 #01838c;
 }
 
 .app-title::before
 {
-  background-position: -180px;
   -webkit-animation: flare 5s infinite;
   -webkit-animation-timing-function: linear;
-  background-image: linear-gradient(65deg, transparent 20%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 27%, transparent 27%, transparent 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  content: "MovieTracker";
-  color: #FFF;
-  display: block;
-  padding-right: 140px;
-  position: absolute;
-  /*z-index: 2;*/
-
-}
-
-.app-title::after
-{
-  content: "MovieTracker";
-  color: #FFF;
-  display: block;
-  position: absolute;
-  text-shadow: 0 1px #563440, 0 2px #563440, 0 3px #563440, 0 4px #563440, 0 5px #563440, 0 6px #563440, 0 7px #563440, 0 8px #563440, 0 9px #563440, 0 10px #563440;
-  top: 0;
-  z-index: -1;
 }
 
 .sparkle::after, .sparkle::before
