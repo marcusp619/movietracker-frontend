@@ -1,0 +1,26 @@
+* {
+  /*background: #000;*/
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  background: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-input {
+  height: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.submit-btn {
+  height: 1.5em;
+  font-size: 1.5em;
+  margin: 0 auto 2em auto;
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+}

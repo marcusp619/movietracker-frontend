@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { signInUser } from '../../Actions/user-actions';
 import { connect } from 'react-redux';
 import * as API from '../../Utils/API/'
+import './UserLoginForm.css'
 
 class UserLoginForm extends Component {
   constructor(props) {
@@ -36,19 +37,19 @@ class UserLoginForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
-          className="user-email-login" 
+          className="form-input user-email-login" 
           name="email"
           value={email}
           onChange={this.handleChange}
           placeholder="Enter Email Address" />
         <input 
-          className="user-password-login"
+          className="form-input user-password-login"
           type="password"
           name="password"
           value={value}
           onChange={this.handleChange}
           placeholder="Enter Password" />
-        <button>Go To Movies!</button>
+        <button className="submit-btn">Go To Movies!</button>
       </form>
     )
   }
