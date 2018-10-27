@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         <div className="title-container">
           <span className="app-title">
-            <span className="inner-app-title">MovieTracker</span>
+            <span className="sparkle">MovieTracker</span>
           </span>
         </div>
         <Route exact path='/newuser' component={NewUserForm} />
