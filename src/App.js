@@ -8,6 +8,7 @@ import {withRouter} from 'react-router';
 import {addMovies} from './Actions';
 import NewUserForm from './Components/NewUserForm/NewUserForm';
 import UserLoginForm from './Containers/UserLoginForm/UserLoginForm';
+import Header from './Components/Header/Header';
 
 class App extends Component {
   async componentDidMount() {

@@ -6,10 +6,10 @@ import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
 import './MovieCard.css';
 
+
 class MovieCard extends Component {
   constructor(props) {
     super();
-
     this.state = {
       favorite: false,
       userFavorites: [],

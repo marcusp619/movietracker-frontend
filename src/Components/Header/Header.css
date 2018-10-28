@@ -6,12 +6,13 @@
   color: #0496a0;
   font-size: 1.5em;
   display: block;
-  margin-left: 70rem;
-  padding-top: 1em;
+  text-align: right;
+  padding: 1em;
 }
 
 .fa-sign-out-alt:hover {
-  color: #fff 0px 0px 15px 2px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .app-title {
@@ -85,31 +86,55 @@
 }
 
 @-webkit-keyframes flare {
-  0% {
-    background-position: -180px;
-  }
-  30% {
-    background-position: 700px;
-  }
-  100% {
-    background-position: 700px;
-  }
+  0% { background-position: -180px; }
+  30% { background-position: 700px; }
+  100% { background-position: 700px; }
 }
 
 @-webkit-keyframes sparkle {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.8;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  40%  { opacity: 0.8; }
+  60%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 1030px) {
+  .app-title {
+    font-size: 6.5em;
   }
 }
+
+@media (max-width: 930px) {
+  .app-title {
+    font-size: 5.5em;
+    text-shadow: 5px 0 #01838c;
+  }
+}
+
+@media (max-width: 830px) {
+  .app-title {
+    font-size: 4.5em;
+  }
+}
+
+@media (max-width: 730px) {
+  .app-title {
+    font-size: 3.5em;
+    text-shadow: 4px 0 #01838c;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 2.5em;
+    text-shadow: 3px 0 #01838c;
+  }
+}
+
+@media (max-width: 390px) {
+  .app-title {
+    font-size: 2em;
+  }
+}
+
