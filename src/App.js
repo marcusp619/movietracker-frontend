@@ -19,11 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="title-container">
-          <span className="app-title">
-            <span className="sparkle">MovieTracker</span>
-          </span>
-        </div>
+        <Header />
         <Route exact path="/newuser" component={NewUserForm} />
         <Route
           exact
