@@ -8,3 +8,9 @@ export const addFavorite = (movie, user) => ({
   vote_average: movie.vote_average,
   overview: movie.overview,
 });
+
+export const removeFavorite = (movie, user) => ({
+  type: 'DELETE_FAVORITE',
+  user_id: user.id,
+  movie_id: movie.id
+});
