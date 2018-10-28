@@ -6,7 +6,9 @@ This project was created working with the [The Movie DB API](https://www.themovi
 
 ## Prerequisites 
 `git clone` this [repo](https://github.com/turingschool-examples/movie-tracker) 
+
 `npm install` 
+
 `npm start` to run the server
 
 ## Getting Started
@@ -16,11 +18,14 @@ This project was created working with the [The Movie DB API](https://www.themovi
 
 ## Testing
 [Enzyme](https://github.com/airbnb/enzyme)
+
 [Jest](https://github.com/facebook/jest)
 
 ## Contributing
 [raualex (Alexander Rau) · GitHub](https://github.com/raualex)
+
 [djcaraballo (Dina Caraballo) · GitHub](https://github.com/djcaraballo)
+
 [marcusp619 (Mark Pearyer)· GitHub](https://github.com/marcusp619)
 
 ## Wireframes 
