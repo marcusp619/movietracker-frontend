@@ -1,6 +1,8 @@
 import movies from './movies-reducers';
 import favorites from './fav-reducers';
+import users from './user-reducers';
 import { addFavorite } from '../Actions/favorite-actions';
+import * as UserActions from '../Actions/user-actions';
 
 describe('Movie Reducer', () => {
   it('should return original state as default', () => {
@@ -56,6 +58,37 @@ describe('Favorites Reducer', () => {
     const result = favorites(mockStateFavs, mockFavAction)
 
     expect(result).toEqual(expected)
+  })
+
+  describe('Users Reducer', () => {
+    it('should return original state as default', () => {
+      let result = users(undefined, {type: ''});
+      expect(result).toEqual(null)
+    })
+
+    it('should sign in a user in state', () => {
+      const mockState = {}
+      const mockUser = {
+        name: "Tony Stark",
+        id: 12,
+        email: 'tony.stark@starkindustries.com',
+      }
+      const mockAction = UserActions.signInUser(mockUser)
+
+      const expected = {
+        name: mockUser.name, 
+        id: mockUser.id, 
+        email: mockUser.email
+      }
+
+      const result = users(mockUser, mockAction)
+
+      expect(result).toEqual(expected)
+    })
+
+    it('should sign out a user in state', () => {
+
+    })
   })
 
 })
