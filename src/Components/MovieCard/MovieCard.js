@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { addFavorite } from '../../Actions/favorite-actions';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {addFavorite} from '../../Actions/favorite-actions';
+import {connect} from 'react-redux';
 import * as API from '../../Utils/API/';
 import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
@@ -12,92 +12,99 @@ class MovieCard extends Component {
 
     this.state = {
       favorite: false,
-      userFavorites: []
-    }
+      userFavorites: [],
+    };
   }
 
   async componentDidMount() {
-    console.log(this.props.user.id)
-    let favoriteList = await API.getFavorites(this.props.user.id)
-    this.setState({ userFavorites: favoriteList }, () => this.handleFavorites())
+    console.log(this.props.user.id);
+    let favoriteList = await API.getFavorites(this.props.user.id);
+    this.setState({userFavorites: favoriteList}, () => this.handleFavorites());
   }
 
   handleFavorites = () => {
-    const { userFavorites } = this.state
-    userFavorites.map((fav) => {
+    const {userFavorites} = this.state;
+    userFavorites.map(fav => {
       if (fav.title === this.props.title) {
-        this.setState({ favorite: true })
+        this.setState({favorite: true});
       } else {
-        return
+        return;
       }
-    })
-  }
+    });
+  };
 
   handleClick = () => {
-    const { title, poster_path, id, release_date, vote_average, overview } = this.props
-    this.setState({ favorite: !this.state.favorite })
-    this.props.handleFavorite({ title, poster_path, id, release_date, vote_average, overview }, this.props.user)
+    const {
+      title,
+      poster_path,
+      id,
+      release_date,
+      vote_average,
+      overview,
+    } = this.props;
+    this.setState({favorite: !this.state.favorite});
+    this.props.handleFavorite(
+      {title, poster_path, id, release_date, vote_average, overview},
+      this.props.user,
+    );
     let favoriteMovie = {
       title,
       poster_path,
       user_id: this.props.user.id,
-      movie_id: id, 
-      release_date, 
-      vote_average, 
-      overview
-    }
-    API.addFav(favoriteMovie)
-  }
+      movie_id: id,
+      release_date,
+      vote_average,
+      overview,
+    };
+    API.addFav(favoriteMovie);
+  };
 
   render() {
-    const { favorite } = this.state
+    const {favorite} = this.state;
     if (!favorite) {
       return (
-        <div className='movie-card'>
-          <img 
-            className='star-icon'
-            onClick={this.handleClick} 
-            src={hollowStar} 
-            alt='Favorite not selected' 
+        <div className="movie-card">
+          <img
+            className="star-icon"
+            onClick={this.handleClick}
+            src={hollowStar}
+            alt="Favorite not selected"
           />
-          <img 
-            src={this.props.poster_path} 
-            alt='movie poster' 
-          />
+          <img src={this.props.poster_path} alt="movie poster" />
           <h1>{this.props.title}</h1>
         </div>
       );
     } else if (favorite) {
       return (
-        <div className='movie-card'>
-          <img 
-            className='fav-star-icon' 
+        <div className="movie-card">
+          <img
+            className="fav-star-icon"
             onClick={this.handleClick}
-            src={solidStar} 
-            alt='Favorite not selected' 
+            src={solidStar}
+            alt="Favorite not selected"
           />
-          <img 
-            src={this.props.poster_path} 
-            alt='movie poster' 
-          />
+          <img src={this.props.poster_path} alt="movie poster" />
           <h1>{this.props.title}</h1>
         </div>
-      ); 
+      );
     }
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     favorites: state.favorites,
-    user: state.user
-  }
-}
+    user: state.user,
+  };
+};
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   handleFavorite: (movie, user) => {
-    dispatch(addFavorite(movie, user))
-  }
-})
+    dispatch(addFavorite(movie, user));
+  },
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(MovieCard);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MovieCard);
