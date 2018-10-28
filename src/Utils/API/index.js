@@ -8,7 +8,7 @@ export const fetchMovies = async() => {
 }
 
 export const postNewUser = (newUserInfo) => {
-  console.log(newUserInfo)
+  // console.log(newUserInfo)
   fetch('http://localhost:3000/api/users/new',{ 
     method: "POST",
     body: JSON.stringify({...newUserInfo}),
@@ -20,7 +20,7 @@ export const postNewUser = (newUserInfo) => {
 }
 
 export const checkUser = async (userInfo) => {
-  console.log(userInfo)
+  // console.log(userInfo)
   const response = await fetch('http://localhost:3000/api/users',{
 	method: "POST",
 	body: JSON.stringify(userInfo),
@@ -29,4 +29,14 @@ export const checkUser = async (userInfo) => {
   const result = await response.json()
   const { name, email, id } = result.data
   return { name, email, id }
+}
+
+export const addFav = async (favInfo) => {
+  const response = await fetch('http://localhost:3000/api/users/favorites/new',{
+  method: "POST",
+  body: JSON.stringify(favInfo),
+  headers:{'Content-Type': 'application/json'},
+  })
+  const result = await response.json()
+  console.log('Success:', JSON.stringify(result))
 }

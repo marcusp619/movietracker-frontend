@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { addFavorite } from '../../Actions/favorite-actions';
 import { connect } from 'react-redux';
+import * as API from '../../Utils/API/';
 import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
 import './MovieCard.css';
@@ -24,6 +25,16 @@ class MovieCard extends Component {
     const { title, poster_path, id, release_date, vote_average, overview } = this.props
     this.setState({ favorite: !this.state.favorite })
     this.props.handleFavorite({ title, poster_path, id, release_date, vote_average, overview }, this.props.user)
+    let favoriteMovie = {
+      title,
+      poster_path,
+      user_id: this.props.user.id,
+      movie_id: id, 
+      release_date, 
+      vote_average, 
+      overview
+    }
+    API.addFav(favoriteMovie)
   }
 
   render() {
