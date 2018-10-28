@@ -8,7 +8,7 @@ export const fetchMovies = async() => {
 }
 
 export const postNewUser = (newUserInfo) => {
-  // console.log(newUserInfo)
+  console.log(newUserInfo)
   fetch('http://localhost:3000/api/users/new',{ 
     method: "POST",
     body: JSON.stringify({...newUserInfo}),
@@ -20,7 +20,7 @@ export const postNewUser = (newUserInfo) => {
 }
 
 export const checkUser = async (userInfo) => {
-  // console.log(userInfo)
+  console.log(userInfo)
   const response = await fetch('http://localhost:3000/api/users',{
 	method: "POST",
 	body: JSON.stringify(userInfo),
