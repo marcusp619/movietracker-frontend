@@ -1,0 +1,55 @@
+* {
+  /*background: #000;*/
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  background: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-input {
+  height: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.user-email-login,
+.user-password-login,
+.login-button {
+  border-radius: 14px;
+  font-size: 1.5rem;
+}
+
+.user-email-login {
+  margin-top: 30px;
+}
+
+.user-email-login,
+.user-password-login {
+  height: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 50%;
+}
+
+.login-button {
+  background-color: #beb47e;
+  font-weight: bold;
+  height: 58px;
+  margin-bottom: 30px;
+  width: 51.75%;
+}
