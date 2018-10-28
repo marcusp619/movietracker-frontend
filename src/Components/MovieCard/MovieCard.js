@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import './MovieCard.css'
-=======
 import React, {Component} from 'react';
 import {addFavorite} from '../../Actions/favorite-actions';
 import {connect} from 'react-redux';
@@ -9,20 +5,11 @@ import * as API from '../../Utils/API/';
 import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
 import './MovieCard.css';
->>>>>>> master
+
 
 class MovieCard extends Component {
   constructor(props) {
     super();
-
-<<<<<<< HEAD
-  return (
-    <div className='movie-card'>
-      <img className='movie-poster' src={props.poster_path} alt='movie poster' />
-      <h1 className='movie-title'>{props.title}</h1>
-    </div>
-  );
-=======
     this.state = {
       favorite: false,
       userFavorites: [],
@@ -102,7 +89,6 @@ class MovieCard extends Component {
       );
     }
   }
->>>>>>> master
 }
 
 const mapStateToProps = state => {
