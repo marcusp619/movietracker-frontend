@@ -15,6 +15,7 @@ export const cleanMovieData = async () => {
       release_date, 
       vote_average, 
       overview,
+      favorite: false
     }
   });
 }

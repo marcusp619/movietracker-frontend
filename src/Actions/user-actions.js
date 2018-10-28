@@ -12,7 +12,7 @@ export const signInUser = (user) => ({
   email: user.email
 });
 
-export const signOutUser = ({user}) => ({
+export const signOutUser = (user) => ({
   type: 'SIGN_OUT_USER',
   name: user.email,
   favorites: user.favorites

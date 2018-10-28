@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { addFavorite } from '../../Actions/favorite-actions';
+import { connect } from 'react-redux';
 import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
 import './MovieCard.css';
@@ -12,8 +14,16 @@ class MovieCard extends Component {
     }
   }
 
+  componentDidMount() {
+    if (this.props.favorite === true) {
+      this.setState({ favorite: true })
+    }
+  }
+
   handleClick = () => {
+    const { title, poster_path, id, release_date, vote_average, overview } = this.props
     this.setState({ favorite: !this.state.favorite })
+    this.props.handleFavorite({ title, poster_path, id, release_date, vote_average, overview }, this.props.user)
   }
 
   render() {
@@ -54,4 +64,17 @@ class MovieCard extends Component {
   }
 }
 
-export default MovieCard;
+const mapStateToProps = (state) => {
+  return {
+    favorites: state.favorites,
+    user: state.user
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  handleFavorite: (movie, user) => {
+    dispatch(addFavorite(movie, user))
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieCard);
