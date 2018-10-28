@@ -9,14 +9,19 @@
   /*height: 10rem;*/
 }
 
-.app-title
-{
-  color: #F5C21B;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ECF0EF), to(#066168));
+.app-title {
+  color: #f5c21b;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ecf0ef),
+    to(#066168)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 7em;
   font-weight: 900;
   position: relative;
@@ -24,42 +29,49 @@
   text-shadow: 6px 0 #066168;
 }
 
-.app-title::before
-{
+.app-title::before {
   background-position: -180px;
   -webkit-animation: flare 5s infinite;
   -webkit-animation-timing-function: linear;
-  background-image: linear-gradient(65deg, transparent 20%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 27%, transparent 27%, transparent 100%);
+  background-image: linear-gradient(
+    65deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.3) 27%,
+    transparent 27%,
+    transparent 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  content: "MovieTracker";
-  color: #FFF;
+  content: 'MovieTracker';
+  color: #fff;
   display: block;
   padding-right: 140px;
   position: absolute;
   /*z-index: 2;*/
-
 }
 
-.app-title::after
-{
-  content: "MovieTracker";
-  color: #FFF;
+.app-title::after {
+  content: 'MovieTracker';
+  color: #fff;
   display: block;
   position: absolute;
-  text-shadow: 0 1px #563440, 0 2px #563440, 0 3px #563440, 0 4px #563440, 0 5px #563440, 0 6px #563440, 0 7px #563440, 0 8px #563440, 0 9px #563440, 0 10px #563440;
+  text-shadow: 0 1px #563440, 0 2px #563440, 0 3px #563440, 0 4px #563440,
+    0 5px #563440, 0 6px #563440, 0 7px #563440, 0 8px #563440, 0 9px #563440,
+    0 10px #563440;
   top: 0;
   z-index: -1;
 }
 
-.sparkle::after, .sparkle::before
-{
+.sparkle::after,
+.sparkle::before {
   -webkit-animation: sparkle 5s infinite;
   -webkit-animation-timing-function: linear;
-  background: #FFF;
+  background: #fff;
   border-radius: 100%;
-  box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 25px #FFF, 0 0 30px #FFF, 0 0 35px #FFF;
-  content: "";
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff,
+    0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
+  content: '';
   display: block;
   height: 10px;
   opacity: 0.7;
@@ -67,35 +79,47 @@
   width: 10px;
 }
 
-.sparkle::before
-{
+.sparkle::before {
   -webkit-animation-delay: 0.2s;
   height: 7px;
-  left: 0.10em;
+  left: 0.1em;
   top: 0.9em;
   width: 7px;
 }
 
-.sparkle::after
-{
+.sparkle::after {
   top: 0.32em;
   right: -5px;
 }
 
-@-webkit-keyframes flare
-{
-  0%   { background-position: -180px; }
-  30%  { background-position: 700px; }
-  100% { background-position: 700px; }
+@-webkit-keyframes flare {
+  0% {
+    background-position: -180px;
+  }
+  30% {
+    background-position: 700px;
+  }
+  100% {
+    background-position: 700px;
+  }
 }
 
-@-webkit-keyframes sparkle
-{
-  0%   { opacity: 0; }
-  30%  { opacity: 0; }
-  40%  { opacity: 0.8; }
-  60%  { opacity: 0; }
-  100% { opacity: 0; }
+@-webkit-keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*.title-container {
@@ -189,5 +213,3 @@
   60%  { opacity: 0; }
   100% { opacity: 0; }
 }*/
-
-
