@@ -35,12 +35,6 @@ describe('Favorites Reducer', () => {
       release_date: '2018-10-28', 
       vote_average: 6.6
     }]
-    // const mockOriginalUser = {
-    //   name: "Pepper Potts", 
-    //   id: 3, 
-    //   email: 'pepper.potts@starkindustries.com'
-    // }
-    // const mockStateFavs = [addFavorite(mockOriginalMovie, mockOriginalUser)]
     const mockNewFavMovie = {
       title: 'Venom',
       id: 335983,
