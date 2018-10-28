@@ -17,8 +17,3 @@ export const signOutUser = user => ({
   email: user.email,
   favorites: user.favorites,
 });
-
-export const toggleUserStatus = status => ({
-  type: 'TOGGLE_STATUS',
-  status: !status,
-});
