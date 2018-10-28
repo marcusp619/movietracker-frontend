@@ -1,27 +1,33 @@
 * {
   /*background: #000;*/
 }
+
+.form-wrapper {
+  height: 100vh;
+  background: #000;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: auto;
+  width: 75%;
+  margin: 4rem auto;
   background: #000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .form-input {
   height: 1.5em;
   margin-bottom: 1em;
   font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .user-login-form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 350px;
   justify-content: space-around;
   padding-bottom: 50px;
 }
@@ -30,7 +36,7 @@ form {
 .user-password-login,
 .login-button {
   border-radius: 14px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .user-email-login {
