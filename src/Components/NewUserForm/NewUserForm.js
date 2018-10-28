@@ -8,6 +8,7 @@ class NewUserForm extends Component {
       name: '',
       email: '',
       password: '',
+      favorites: []
     }
   }
 

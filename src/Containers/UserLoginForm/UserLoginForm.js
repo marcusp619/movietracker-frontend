@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import * as API from '../../Utils/API/'
 import './UserLoginForm.css'
 
+
 class UserLoginForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
       email: '',
-      password: '',
-      favorites: []
+      password: ''
     }
   }
 
@@ -21,18 +21,11 @@ class UserLoginForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    // try {
       const fetchedUser = await API.checkUser(this.state)
-      console.log(fetchedUser)
-      this.props.userSignIn(this.state) 
-    // }
-    // catch(error) {
-      // console.log(error.message)
-    // }
+      this.props.userSignIn(fetchedUser) 
   }
 
   render() {
-    // const { handleSubmit } = this.props
     const { email, value } = this.state
     return (
       <form onSubmit={this.handleSubmit}>
@@ -55,10 +48,14 @@ class UserLoginForm extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  user: state.user
+})
+
 const mapDispatchToProps = (dispatch) => ({
   userSignIn: (user) => {
-    dispatch((user) => signInUser(user))
+    dispatch(signInUser(user))
   }
 })
 
-export default connect(null, mapDispatchToProps)(UserLoginForm)
+export default connect(mapStateToProps, mapDispatchToProps)(UserLoginForm)
