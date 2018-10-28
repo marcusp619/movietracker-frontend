@@ -17,10 +17,39 @@ form {
   font-family: 'Montserrat', sans-serif;
 }
 
-.submit-btn {
-  height: 1.5em;
-  font-size: 1.5em;
-  margin: 0 auto 2em auto;
+.user-login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.user-email-login,
+.user-password-login,
+.login-button {
+  border-radius: 14px;
+  font-size: 1.5rem;
+}
+
+.user-email-login {
+  margin-top: 30px;
+}
+
+.user-email-login,
+.user-password-login {
+  height: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
   width: 50%;
-  font-family: 'Montserrat', sans-serif;
+}
+
+.login-button {
+  background-color: #beb47e;
+  font-weight: bold;
+  height: 58px;
+  margin-bottom: 30px;
+  width: 51.75%;
 }

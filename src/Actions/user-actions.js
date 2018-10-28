@@ -5,19 +5,20 @@ export const newUser = (name, email, password) => ({
   password,
 });
 
-export const signInUser = ({user}) => ({
+export const signInUser = user => ({
   type: 'SIGN_IN_USER',
-  name: user.email,
-  favorites: user.favorites
+  name: user.name,
+  id: user.id,
+  email: user.email,
 });
 
-export const signOutUser = ({user}) => ({
+export const signOutUser = user => ({
   type: 'SIGN_OUT_USER',
   name: user.email,
-  favorites: user.favorites
+  favorites: user.favorites,
 });
 
-export const toggleUserStatus = (status) => ({
+export const toggleUserStatus = status => ({
   type: 'TOGGLE_STATUS',
   status: !status,
 });
