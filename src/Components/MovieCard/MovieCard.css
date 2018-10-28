@@ -1,0 +1,11 @@
+.movie-poster:hover {
+  box-shadow: #eaffea 0px 0px 20px 5px;
+  cursor: pointer;
+}
+
+.movie-title {
+  color: #bdcdcd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}

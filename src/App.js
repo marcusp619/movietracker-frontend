@@ -7,6 +7,7 @@ import { Route } from 'react-router-dom'
 import { addMovies } from './Actions'
 import NewUserForm from './Components/NewUserForm/NewUserForm';
 import UserLoginForm from './Containers/UserLoginForm/UserLoginForm';
+import Header from './Components/Header/Header';
 
 class App extends Component {
 
@@ -18,11 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="title-container">
-          <span className="app-title">
-            <span className="sparkle">MovieTracker</span>
-          </span>
-        </div>
+        <Header />
         <Route exact path='/newuser' component={NewUserForm} />
         <Route exact path='/' component={MovieContainer} />
         <Route exact path='/login' component={UserLoginForm} />
