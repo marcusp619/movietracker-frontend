@@ -40,3 +40,9 @@ export const addFav = async (favInfo) => {
   const result = await response.json()
   console.log('Success:', JSON.stringify(result))
 }
+
+export const getFavorites = async (userId) => {
+  const response = await fetch(`http://localhost:3000/api/users/${userId}/favorites`)
+  const result = await response.json()
+  return result.data
+}

@@ -11,14 +11,26 @@ class MovieCard extends Component {
     super();
 
     this.state = {
-      favorite: false
+      favorite: false,
+      userFavorites: []
     }
   }
 
-  componentDidMount() {
-    if (this.props.favorite === true) {
-      this.setState({ favorite: true })
-    }
+  async componentDidMount() {
+    console.log(this.props.user.id)
+    let favoriteList = await API.getFavorites(this.props.user.id)
+    this.setState({ userFavorites: favoriteList }, () => this.handleFavorites())
+  }
+
+  handleFavorites = () => {
+    const { userFavorites } = this.state
+    userFavorites.map((fav) => {
+      if (fav.title === this.props.title) {
+        this.setState({ favorite: true })
+      } else {
+        return
+      }
+    })
   }
 
   handleClick = () => {
