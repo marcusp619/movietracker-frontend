@@ -1,29 +1,37 @@
-import React, {Component} from 'react';
-import * as API from '../../Utils/API';
+import React, { Component } from "react";
+import * as API from "../../Utils/API";
+import "./NewUserForm.css";
 
 class NewUserForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
-      password: '',
+      name: "",
+      email: "",
+      password: "",
       favorites: [],
+      hasError: false,
+      isSuccess: false
     };
   }
 
   handleChange = e => {
-    const {name, value} = e.target;
-    this.setState({[name]: value});
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    API.postNewUser(this.state);
+    const result = await API.postNewUser(this.state);
+    if (result.error) {
+      this.setState({ hasError: true });
+    } else {
+    }
   };
 
   render() {
-    const {name, email, password} = this.state;
+    const { name, email, password, hasError } = this.state;
+
     return (
       <form onSubmit={this.handleSubmit}>
         <input
@@ -32,13 +40,17 @@ class NewUserForm extends Component {
           value={name}
           onChange={this.handleChange}
           placeholder="Enter Full Name"
+          required
         />
+        {hasError ? <label htmlFor="Email">Email Already Taken</label> : null}
         <input
           name="email"
+          id="Email"
           className="user-email-input"
           value={email}
           onChange={this.handleChange}
           placeholder="Enter Email Address"
+          required
         />
         <input
           name="password"
