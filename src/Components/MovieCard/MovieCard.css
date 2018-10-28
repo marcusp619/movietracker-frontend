@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .movie-poster:hover {
   box-shadow: #eaffea 0px 0px 20px 5px;
   cursor: pointer;
@@ -10,7 +9,6 @@
   font-size: 1.5em;
   font-weight: 400;
 }
-=======
 .star-icon {
   background-color: rgba(190, 180, 126, 0.8);
   border: solid 2px #c72931;
@@ -32,4 +30,3 @@
   position: relative;
   width: 40px;
 }
->>>>>>> master
