@@ -8,4 +8,5 @@
 
 .movie-container > div {
   border-bottom: double #01838c;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
