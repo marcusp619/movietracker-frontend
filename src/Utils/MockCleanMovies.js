@@ -10,6 +10,7 @@ export default [
     release_date: '2018-10-03',
     title: 'Venom',
     vote_average: 6.6,
+    favorite: false,
   },
   {
     backdrop_path:
@@ -22,6 +23,7 @@ export default [
     release_date: '2018-10-03',
     title: 'A Star Is Born',
     vote_average: 7.5,
+    favorite: false,
   },
   {
     backdrop_path:
@@ -34,5 +36,6 @@ export default [
     release_date: '2018-09-13',
     title: 'The Predator',
     vote_average: 5.3,
+    favorite: false,
   },
 ];
