@@ -1,19 +1,6 @@
-* {
-  /*background: #000;*/
-}
-
 .form-wrapper {
   height: 100vh;
   background: #000;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: 4rem auto;
-  background: #000;
-  font-family: 'Lato', sans-serif;
 }
 
 .form-input {
@@ -30,6 +17,11 @@ form {
   height: 350px;
   justify-content: space-around;
   padding-bottom: 50px;
+  flex-direction: column;
+  width: 75%;
+  margin: 4rem auto;
+  background: #000;
+  font-family: 'Lato', sans-serif;
 }
 
 .user-email-login,
@@ -58,4 +50,8 @@ form {
   height: 58px;
   margin-bottom: 30px;
   width: 51.75%;
+}
+
+.user-signup-link {
+  font-size: 1.5em;
 }

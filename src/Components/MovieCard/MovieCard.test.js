@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
 import MovieCard from './MovieCard';
 import { shallow } from 'enzyme';
 
 describe('MovieCard', () => {
   let wrapper
   let mockMovie = { poster_path: '/something.jpg', title: 'MOVIE' }
+  const store = jest.fn()
   
   beforeEach(() => {
     wrapper = shallow(<MovieCard key={1} {...mockMovie} />)

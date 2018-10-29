@@ -11,7 +11,6 @@ class NewUserForm extends Component {
       password: '',
       favorites: [],
       hasError: false,
-      isSuccess: false,
     };
   }
 
@@ -33,35 +32,37 @@ class NewUserForm extends Component {
     const {name, email, password, hasError} = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          name="name"
-          className="user-name-input"
-          value={name}
-          onChange={this.handleChange}
-          placeholder="Enter Full Name"
-          required
-        />
-        {hasError ? <label htmlFor="Email">Email Already Taken</label> : null}
-        <input
-          name="email"
-          id="Email"
-          className="user-email-input"
-          value={email}
-          onChange={this.handleChange}
-          placeholder="Enter Email Address"
-          required
-        />
-        <input
-          name="password"
-          type="password"
-          className="user-password-input"
-          value={password}
-          onChange={this.handleChange}
-          placeholder="Enter Password"
-        />
-        <button>Submit</button>
-      </form>
+       <div className="form-wrapper">
+         <form className="new-user-form" onSubmit={this.handleSubmit}>
+          <input
+            name="name"
+            className="form-input user-name-input"
+            value={name}
+            onChange={this.handleChange}
+            placeholder="Enter Full Name"
+            required
+          />
+          {hasError ? <label htmlFor="Email">Email Already Taken</label> : null}
+          <input
+            name="email"
+            id="Email"
+            className="form-input user-email-input"
+            value={email}
+            onChange={this.handleChange}
+            placeholder="Enter Email Address"
+            required
+          />
+          <input
+            name="password"
+            type="password"
+            className="form-input user-password-input"
+            value={password}
+            onChange={this.handleChange}
+            placeholder="Enter Password"
+          />
+          <button className="signup-button">Sign Up!</button>
+        </form>
+      </div>
     );
   }
 }

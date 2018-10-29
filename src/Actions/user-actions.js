@@ -14,11 +14,6 @@ export const signInUser = user => ({
 
 export const signOutUser = user => ({
   type: 'SIGN_OUT_USER',
-  name: user.email,
+  email: user.email,
   favorites: user.favorites,
-});
-
-export const toggleUserStatus = status => ({
-  type: 'TOGGLE_STATUS',
-  status: !status,
 });
