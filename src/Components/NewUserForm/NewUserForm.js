@@ -1,36 +1,36 @@
-import React, { Component } from "react";
-import * as API from "../../Utils/API";
-import "./NewUserForm.css";
+import React, {Component} from 'react';
+import * as API from '../../Utils/API';
+import './NewUserForm.css';
 
 class NewUserForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      password: "",
+      name: '',
+      email: '',
+      password: '',
       favorites: [],
       hasError: false,
-      isSuccess: false
+      isSuccess: false,
     };
   }
 
   handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
+    const {name, value} = e.target;
+    this.setState({[name]: value});
   };
 
   handleSubmit = async e => {
     e.preventDefault();
     const result = await API.postNewUser(this.state);
     if (result.error) {
-      this.setState({ hasError: true });
+      this.setState({hasError: true});
     } else {
     }
   };
 
   render() {
-    const { name, email, password, hasError } = this.state;
+    const {name, email, password, hasError} = this.state;
 
     return (
       <form onSubmit={this.handleSubmit}>
