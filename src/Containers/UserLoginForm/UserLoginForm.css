@@ -3,15 +3,6 @@
   background: #000;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: 4rem auto;
-  background: #000;
-  font-family: 'Lato', sans-serif;
-}
-
 .form-input {
   height: 1.5em;
   margin-bottom: 1em;
@@ -26,6 +17,11 @@ form {
   height: 350px;
   justify-content: space-around;
   padding-bottom: 50px;
+  flex-direction: column;
+  width: 75%;
+  margin: 4rem auto;
+  background: #000;
+  font-family: 'Lato', sans-serif;
 }
 
 .user-email-login,

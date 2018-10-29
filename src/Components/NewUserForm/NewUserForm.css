@@ -1,0 +1,51 @@
+.form-wrapper {
+  height: 100vh;
+  background: #000;
+}
+
+.form-input {
+  height: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
+}
+
+.new-user-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  flex-direction: column;
+  width: 75%;
+  margin: 4rem auto;
+  background: #000;
+  font-family: 'Lato', sans-serif;
+}
+
+.user-name-input,
+.user-email-input,
+.user-password-input,
+.signup-button {
+  border-radius: 14px;
+  font-size: 1.5em;
+  height: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 50%;
+}
+
+.user-name-input {
+  margin-top: 30px;
+}
+
+.signup-button {
+  background-color: #beb47e;
+  font-weight: bold;
+  height: 58px;
+  margin-bottom: 30px;
+  width: 51.75%;
+}
+
