@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { addFavorites } from '../../Actions/favorite-actions';
 import { updateMovies } from '../../Actions/';
 import { connect } from 'react-redux';
 import * as API from '../../Utils/API/';
@@ -13,7 +12,6 @@ class MovieCard extends Component {
     super();
     this.state = {
       favorite: false,
-      userFavorites: [],
     };
   }
 
@@ -27,6 +25,7 @@ class MovieCard extends Component {
     movies.map(fav => {
       if (fav.title === this.props.title) {
         this.setState({favorite: true});
+        this.toggleFavoriteInState()
       } else {
         return;
       }
@@ -39,14 +38,45 @@ class MovieCard extends Component {
     const { id } = this.props
     const newMovies = this.props.movies.map(movie => {
       if (movie.id === id) {
-      movie.favorite = !movie.favorite
-      return movie
+        movie.favorite = !movie.favorite
+        this.handleFavorite(movie)
+        return movie
       } else {
         return movie
       }
     })
     this.props.updateMovies(newMovies)
   };
+
+  toggleFavoriteInState = () => {
+    this.props.movies.map(movie => {
+      if (movie.id === this.props.id) {
+        movie.favorite = !movie.favorite
+        return movie
+      } else {
+        return movie
+      } 
+    })
+  }
+
+  handleFavorite = (movie) => {
+    const { id, title, poster_path, release_date, vote_average, overview } = movie
+    let favoriteMovie = {
+      movie_id: id,
+      user_id: this.props.user.id,
+      title,
+      poster_path,
+      release_date,
+      vote_average,
+      overview 
+    }
+    if (!this.state.favorite) {
+      API.addFav(favoriteMovie)
+    } else if (this.state.favorite) {
+      API.removeFavorite(favoriteMovie)
+      this.toggleFavoriteInState()
+    }
+  }
 
   render() {
     const {favorite} = this.state;
@@ -73,9 +103,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  handleFavorites: (movie) => {
-    dispatch(addFavorites(movie));
-  },
   updateMovies: (movieArray) => {
     dispatch(updateMovies(movieArray));
   }
