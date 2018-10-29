@@ -32,7 +32,7 @@ This project was created working with the [The Movie DB API](https://www.themovi
 ## Wireframes 
 ![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/Login-Screen.png)
 ![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/Movies.png?raw=true)
-![Alt text](./src/Wireframes/Movies.png "Wireframe")
+![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/New-User-Sign-Up-Screen.png?raw=true)
 
 ## Desktop View
 
