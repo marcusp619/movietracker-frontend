@@ -10,6 +10,7 @@ class NewUserForm extends Component {
       email: '',
       password: '',
       favorites: [],
+      hasError: false,
     };
   }
 
@@ -18,29 +19,38 @@ class NewUserForm extends Component {
     this.setState({[name]: value});
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    API.postNewUser(this.state);
+    const result = await API.postNewUser(this.state);
+    if (result.error) {
+      this.setState({hasError: true});
+    } else {
+    }
   };
 
   render() {
-    const {name, email, password} = this.state;
+    const {name, email, password, hasError} = this.state;
+
     return (
-      <div className="form-wrapper">
-        <form className="new-user-form" onSubmit={this.handleSubmit}>
+       <div className="form-wrapper">
+         <form className="new-user-form" onSubmit={this.handleSubmit}>
           <input
             name="name"
             className="form-input user-name-input"
             value={name}
             onChange={this.handleChange}
             placeholder="Enter Full Name"
+            required
           />
+          {hasError ? <label htmlFor="Email">Email Already Taken</label> : null}
           <input
             name="email"
+            id="Email"
             className="form-input user-email-input"
             value={email}
             onChange={this.handleChange}
             placeholder="Enter Email Address"
+            required
           />
           <input
             name="password"

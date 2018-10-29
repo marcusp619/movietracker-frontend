@@ -56,7 +56,11 @@ class MovieCard extends Component {
       vote_average,
       overview,
     };
-    API.addFav(favoriteMovie);
+    if (!this.state.favorite) {
+      API.addFav(favoriteMovie);
+    } else if (this.state.favorite) {
+      API.removeFavorites(favoriteMovie);
+    };
   };
 
   render() {
