@@ -32,7 +32,7 @@ describe('Favorites Reducer', () => {
     const mockStateFavs = [{
       title: 'Night School', 
       id: 23457, 
-      overview: 'Some people go to night school and hijinx ensues', 
+      overview: 'Some people go to night school and hijinx ensue', 
       poster_path: 'http://randomPosterPath.jpg', 
       release_date: '2018-10-28', 
       vote_average: 6.6
@@ -87,7 +87,26 @@ describe('Favorites Reducer', () => {
     })
 
     it('should sign out a user in state', () => {
+      const mockUser = {
+        name: "Tony Stark",
+        id: 12,
+        email: 'tony.stark@starkindustries.com',
+        favorites: [{
+          title: 'Night School', 
+          id: 23457, 
+          overview: 'Some people go to night school and hijinx ensues', 
+          poster_path: 'http://randomPosterPath.jpg', 
+          release_date: '2018-10-28', 
+          vote_average: 6.6
+        }]
+      }
+      const mockState = [mockUser]
+      const mockAction = UserActions.signOutUser(mockUser)
+      const expected = {}
+      
+      const result = users(mockUser, mockAction)
 
+      expect(result).toEqual(expected)
     })
   })
 
