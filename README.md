@@ -2,6 +2,7 @@
 This project was created working with the [The Movie DB API](https://www.themoviedb.org/documentation/api) The idea of the project is to be able to sign in as a user and save favorite movies.
 
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/marcusp619/movietracker-frontend.svg?columns=all)](https://waffle.io/marcusp619/movietracker-frontend)
 
 
 ## Prerequisites 
@@ -29,6 +30,9 @@ This project was created working with the [The Movie DB API](https://www.themovi
 [marcusp619 (Mark Pearyer)· GitHub](https://github.com/marcusp619)
 
 ## Wireframes 
+![Alt text](./src/Wireframes/Login-Screen.png "Wireframe")
+![Alt text](./src/Wireframes/New-User-Sign-Up-Screen.png "Wireframe")
+![Alt text](./src/Wireframes/Movies.png "Wireframe")
 
 ## Desktop View
 
