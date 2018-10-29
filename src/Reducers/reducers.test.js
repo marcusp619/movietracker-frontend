@@ -22,6 +22,7 @@ describe('Movie Reducer', () => {
   });
 });
 
+
 describe('Favorites Reducer', () => {
   it('should return original state as default', () => {
     let result = favorites(undefined, {type: ''});
@@ -59,6 +60,7 @@ describe('Favorites Reducer', () => {
 
     expect(result).toEqual(expected)
   })
+
 
   describe('Users Reducer', () => {
     it('should return original state as default', () => {
@@ -103,7 +105,7 @@ describe('Favorites Reducer', () => {
       const mockState = [mockUser]
       const mockAction = UserActions.signOutUser(mockUser)
       const expected = {}
-      
+
       const result = users(mockUser, mockAction)
 
       expect(result).toEqual(expected)
