@@ -49,3 +49,21 @@ export const getFavorites = async userId => {
   const result = await response.json();
   return result.data;
 };
+
+export const removeFavorites = async (favInfo) => { 
+  try {
+    const response = await fetch(`http://localhost:3000/api/users/${favInfo.user_id}/favorites/${favInfo.movie_id}`, {
+        method: 'DELETE',
+        body: JSON.stringify({
+          movie_id: favInfo.movie_id,
+          user_id: favInfo.user_id,
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+  }
+  catch (error) {
+    console.log(error.message)
+  }
+}
