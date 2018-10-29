@@ -30,7 +30,7 @@ describe('Favorites Action Creator', () => {
       overview: 'When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.',
     }
 
-    const result = FavoritesReducer.addFavorite(mockMovie, mockUser)
+    const result = FavoritesReducer.addFavorites(mockMovie, mockUser)
 
     expect(result).toEqual(expectedAction)
   })
