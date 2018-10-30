@@ -74,10 +74,14 @@ describe('UserLoginForm', () => {
     it('should return an object with the user', () => {
       const mockState = {
         movies: [],
-        user: {name: 'Christie'},
+        user: {name: 'Louisa', email: 'blah@gmail.com'},
         favorites: []
       }
-      
+      const expected = {
+        user: {name: 'Louisa', email: 'blah@gmail.com'}
+      }
+      const mappedProps = mapStateToProps(mockState)
+      expect(mappedProps).toEqual(expected)
     })
   })
 
