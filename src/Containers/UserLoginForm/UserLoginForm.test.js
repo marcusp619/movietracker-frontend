@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { UserLoginForm } from './UserLoginForm';
+import { UserLoginForm, mapStateToProps, mapDispatchToProps } from './UserLoginForm';
 import { shallow } from 'enzyme';
 import * as API from "../../Utils/API/";
 
@@ -12,10 +12,6 @@ describe('UserLoginForm', () => {
     id: 1806,
     email: 'Louisa@turing.io',
     password: 'oooooooooooookay'
-  }
-  const mockState = {
-    email: 'Louisa',
-    password: 'blah@gmail.com',
   }
 
   beforeEach(() => {
@@ -75,7 +71,7 @@ describe('UserLoginForm', () => {
   })
 
   describe('mapStateToProps function', () => {
-
+    
   })
 
   describe('mapDispatchToProps function', () => {

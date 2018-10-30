@@ -39,15 +39,24 @@ describe('NewUserForm', () => {
   })
 
   describe('handleSubmit function', () => {
+    let mockForm;
+
+    beforeEach(() => {
+      mockForm = wrapper.find('.new-user-form')
+    })
     it('should call postNewUser with the correct params', () => {
       API.postNewUser = jest.fn()
-      const mockForm = wrapper.find('.new-user-form')
       mockForm.simulate('submit', {preventDefault() {}})
       expect(API.postNewUser).toHaveBeenCalled()
     })
 
-    it('should set state with hasError as true if fetch call fails', () => {
-
+    xit('should set state with hasError as true if fetch call fails', () => {
+      const result = {error: "Welp, that didn't work!"}
+      API.postNewUser = jest.fn().mockImplementation(() => {
+        Promise.resolve(result)
+      })
+      mockForm.simulate('submit', {preventDefault() {}})
+      expect(wrapper.state().hasError).toEqual(true)
     })
   })
 });
