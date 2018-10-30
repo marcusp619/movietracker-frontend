@@ -4,6 +4,8 @@ const movies = (state = [], action) => {
       return [...state, ...action.movies];
     case 'UPDATE_MOVIES':
       return [...action.movies];
+    case 'FILTER_MOVIES':
+      return action.movies.filter(film => film.favorite === true)
     default:
       return state;
   }
