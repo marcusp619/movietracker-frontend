@@ -12,3 +12,7 @@ export const filterMovies = moviesArray => ({
   type: 'FILTER_MOVIES',
   movies: moviesArray
 })
+
+export const clearMovies = () => ({
+  type: 'CLEAR_MOVIES'
+})

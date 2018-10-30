@@ -7,6 +7,8 @@ const movies = (state = [], action) => {
     case 'FILTER_MOVIES':
     console.log(action.movies)
       return action.movies.filter(film => film.favorite === true)
+    case 'CLEAR_MOVIES':
+      return []
     default:
       return state;
   }
