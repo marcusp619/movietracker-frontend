@@ -16,7 +16,6 @@ class MovieCard extends Component {
   }
 
   async componentDidMount() {
-    // console.log(this.props.user.id);
     let favoriteList = await API.getFavorites(this.props.user.id);
     this.mapFavorites(favoriteList);
   }
