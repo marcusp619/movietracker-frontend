@@ -10,7 +10,7 @@ h2, h3, label {
 .form-input {
   height: 1.5em;
   margin-bottom: 1em;
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   font-family: 'Lato', sans-serif;
 }
 
@@ -38,7 +38,7 @@ h2, h3, label {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-top: 10px;
-  width: 50%;
+  width: 30rem;
 }
 
 .user-name-input {
@@ -50,6 +50,45 @@ h2, h3, label {
   font-weight: bold;
   height: 58px;
   margin-bottom: 30px;
-  width: 51.75%;
+  width: 31.75rem;
+}
+
+@media (max-width: 600px) {
+  .user-name-input,
+  .user-email-input,
+  .user-password-input {
+    height: 30px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 85%;
+  }
+
+  .signup-button {
+    font-size: 1em;
+    height: 48px;
+    width: 86.75%;
+  }
+
+  .user-login-form {
+    margin: 3rem auto;
+    width: 85%;
+  }
+
+  .form-input {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 475px) {
+  .new-user-form {
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .new-user-form {
+    margin: 1rem auto;
+  }
 }
 

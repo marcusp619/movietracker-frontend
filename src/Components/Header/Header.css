@@ -105,27 +105,27 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 975px) {
   .app-title {
     font-size: 5.75em;
     text-shadow: 5px 0 #01838c;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 875px) {
   .app-title {
     font-size: 5em;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 775px) {
   .app-title {
     font-size: 4em;
     text-shadow: 4px 0 #01838c;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 675px) {
   .app-title {
     font-size: 3.5em;
     text-shadow: 3px 0 #01838c;
@@ -136,14 +136,14 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 575px) {
   .app-title {
     font-size: 3em;
     text-shadow: 3px 0 #01838c;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 475px) {
   .app-title {
     font-size: 2em;
   }

@@ -56,7 +56,7 @@
   font-size: 1.5em;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 600px) {
   .user-email-login,
   .user-password-login {
     font-size: 1em;
@@ -79,13 +79,13 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 475px) {
   .user-login-form {
     margin: 2rem auto;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
   .user-login-form {
     margin: 1rem auto;
   }
