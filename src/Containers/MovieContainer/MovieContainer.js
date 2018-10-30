@@ -6,7 +6,7 @@ import * as DataCleaner from '../../Utils/Cleaners/';
 import './MovieContainer.css';
 import MovieCard from '../../Components/MovieCard/MovieCard';
 
-class MovieContainer extends Component {
+export class MovieContainer extends Component {
   constructor(props) {
     super(props);
   }
@@ -57,14 +57,14 @@ class MovieContainer extends Component {
   };
 };
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     movies: state.movies,
     user: state.user
   };
 };
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   updateMovies: (movies) => dispatch(filterMovies(movies)),
   addMovies: movieInfo => dispatch(addMovies(movieInfo)),
   clearMovies: () => dispatch(clearMovies())
