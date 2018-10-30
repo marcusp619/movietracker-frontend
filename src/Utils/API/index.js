@@ -52,7 +52,7 @@ export const getFavorites = async userId => {
 
 export const removeFavorite = async (favInfo) => { 
   try {
-    const response = await fetch(`http://localhost:3000/api/users/${favInfo.user_id}/favorites/${favInfo.movie_id}`, {
+    await fetch(`http://localhost:3000/api/users/${favInfo.user_id}/favorites/${favInfo.movie_id}`, {
         method: 'DELETE',
         body: JSON.stringify({
           movie_id: favInfo.movie_id,

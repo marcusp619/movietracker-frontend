@@ -23,25 +23,33 @@ class MovieContainer extends Component {
     });
 
     return  (
-      <div className="movie-container">
+      <div>
         <Route exact path="/favorites" render={() => (
           <div>
-            <NavLink to='/'
-              className='home-btn'
-              onClick={this.resetMovies}
-            >HOME
-            </NavLink>
-            {cards}
+            <div className="nav-btn-container">
+              <NavLink to='/'
+                className='home-btn'
+                onClick={this.resetMovies}
+              >HOME
+              </NavLink>
+            </div>
+            <div className="movie-container">
+              {cards}
+            </div>
           </div>
         ) }/>
         <Route exact path="/" render={() => (
           <div>
-            <NavLink to='/favorites'
-              className='favorites-btn'
-              onClick={() => this.props.updateMovies(this.props.movies)}
-            >FAVORITES
-            </NavLink>
-            {cards}
+            <div className="nav-btn-container">
+              <NavLink to='/favorites'
+                className='favorites-btn'
+                onClick={() => this.props.updateMovies(this.props.movies)}
+              >FAVORITES
+              </NavLink>
+            </div>
+            <div className="movie-container">
+              {cards}
+            </div>
           </div>
         ) }/>
       </div>
