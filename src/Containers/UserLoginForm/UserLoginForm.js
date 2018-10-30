@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as API from "../../Utils/API/";
 import "./UserLoginForm.css";
 
-class UserLoginForm extends Component {
+export class UserLoginForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
