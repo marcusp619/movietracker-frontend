@@ -3,63 +3,50 @@
 exports[`MovieContainer should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(MovieContainer)
-    store={
+  Symbol(enzyme.__unrendered__): <MovieContainer
+    addMovies={[MockFunction]}
+    clearMovies={[MockFunction]}
+    movies={
+      Array [
+        Object {
+          "backdrop_path": "http://image.tmdb.org/t/p/w1280/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
+          "favorite": false,
+          "id": 335983,
+          "overview": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \\"Venom\\" to save his life.",
+          "poster_path": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+          "release_date": "2018-10-03",
+          "title": "Venom",
+          "vote_average": 6.6,
+        },
+        Object {
+          "backdrop_path": "http://image.tmdb.org/t/p/w1280/840rbblaLc4SVxm8gF3DNdJ0YAE.jpg",
+          "favorite": false,
+          "id": 332562,
+          "overview": "Seasoned musician Jackson Maine discovers—and falls in love with—struggling artist Ally. She has just about given up on her dream to make it big as a singer—until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.",
+          "poster_path": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg",
+          "release_date": "2018-10-03",
+          "title": "A Star Is Born",
+          "vote_average": 7.5,
+        },
+        Object {
+          "backdrop_path": "http://image.tmdb.org/t/p/w1280/f4E0ocYeToEuXvczZv6QArrMDJ.jpg",
+          "favorite": false,
+          "id": 346910,
+          "overview": "From the outer reaches of space to the small-town streets of suburbia, the hunt comes home. Now, the universe’s most lethal hunters are stronger, smarter and deadlier than ever before, having genetically upgraded themselves with DNA from other species. When a young boy accidentally triggers their return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.",
+          "poster_path": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg",
+          "release_date": "2018-09-13",
+          "title": "The Predator",
+          "vote_average": 5.3,
+        },
+      ]
+    }
+    updateMovies={[MockFunction]}
+    user={
       Object {
-        "dispatch": [MockFunction],
-        "getState": [MockFunction] {
-          "calls": Array [
-            Array [],
-            Array [],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": Object {
-                "movies": Array [
-                  Object {
-                    "backdrop_path": "/somethingelse.jpg",
-                    "id": 9,
-                    "overview": "This is a movie.",
-                    "poster_path": "/something.jpg",
-                    "release_date": "2018",
-                    "title": "Venom",
-                    "vote_average": 6.6,
-                  },
-                ],
-              },
-            },
-            Object {
-              "isThrow": false,
-              "value": Object {
-                "movies": Array [
-                  Object {
-                    "backdrop_path": "/somethingelse.jpg",
-                    "id": 9,
-                    "overview": "This is a movie.",
-                    "poster_path": "/something.jpg",
-                    "release_date": "2018",
-                    "title": "Venom",
-                    "vote_average": 6.6,
-                  },
-                ],
-              },
-            },
-          ],
-        },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "email": "Louisa@turing.io",
+        "id": 1806,
+        "name": "Louisa",
+        "password": "oooooooooooookay",
       }
     }
   />,
@@ -74,293 +61,103 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "dispatch": [MockFunction],
-      "movies": Array [
-        Object {
-          "backdrop_path": "/somethingelse.jpg",
-          "id": 9,
-          "overview": "This is a movie.",
-          "poster_path": "/something.jpg",
-          "release_date": "2018",
-          "title": "Venom",
-          "vote_average": 6.6,
-        },
+      "children": Array [
+        <Route
+          exact={true}
+          path="/favorites"
+          render={[Function]}
+        />,
+        <Route
+          exact={true}
+          path="/"
+          render={[Function]}
+        />,
       ],
-      "store": Object {
-        "dispatch": [MockFunction],
-        "getState": [MockFunction] {
-          "calls": Array [
-            Array [],
-            Array [],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": Object {
-                "movies": Array [
-                  Object {
-                    "backdrop_path": "/somethingelse.jpg",
-                    "id": 9,
-                    "overview": "This is a movie.",
-                    "poster_path": "/something.jpg",
-                    "release_date": "2018",
-                    "title": "Venom",
-                    "vote_average": 6.6,
-                  },
-                ],
-              },
-            },
-            Object {
-              "isThrow": false,
-              "value": Object {
-                "movies": Array [
-                  Object {
-                    "backdrop_path": "/somethingelse.jpg",
-                    "id": 9,
-                    "overview": "This is a movie.",
-                    "poster_path": "/something.jpg",
-                    "release_date": "2018",
-                    "title": "Venom",
-                    "vote_average": 6.6,
-                  },
-                ],
-              },
-            },
-          ],
-        },
-        "subscribe": [MockFunction] {
-          "calls": Array [
-            Array [
-              [Function],
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
-      },
-      "storeSubscription": Subscription {
-        "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
-          "notify": [Function],
-          "subscribe": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "dispatch": [MockFunction],
-          "getState": [MockFunction] {
-            "calls": Array [
-              Array [],
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": Object {
-                  "movies": Array [
-                    Object {
-                      "backdrop_path": "/somethingelse.jpg",
-                      "id": 9,
-                      "overview": "This is a movie.",
-                      "poster_path": "/something.jpg",
-                      "release_date": "2018",
-                      "title": "Venom",
-                      "vote_average": 6.6,
-                    },
-                  ],
-                },
-              },
-              Object {
-                "isThrow": false,
-                "value": Object {
-                  "movies": Array [
-                    Object {
-                      "backdrop_path": "/somethingelse.jpg",
-                      "id": 9,
-                      "overview": "This is a movie.",
-                      "poster_path": "/something.jpg",
-                      "release_date": "2018",
-                      "title": "Venom",
-                      "vote_average": 6.6,
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
-        },
-        "unsubscribe": undefined,
-      },
+      "className": "movie-container",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/favorites",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "dispatch": [MockFunction],
-        "movies": Array [
-          Object {
-            "backdrop_path": "/somethingelse.jpg",
-            "id": 9,
-            "overview": "This is a movie.",
-            "poster_path": "/something.jpg",
-            "release_date": "2018",
-            "title": "Venom",
-            "vote_average": 6.6,
-          },
+        "children": Array [
+          <Route
+            exact={true}
+            path="/favorites"
+            render={[Function]}
+          />,
+          <Route
+            exact={true}
+            path="/"
+            render={[Function]}
+          />,
         ],
-        "store": Object {
-          "dispatch": [MockFunction],
-          "getState": [MockFunction] {
-            "calls": Array [
-              Array [],
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": Object {
-                  "movies": Array [
-                    Object {
-                      "backdrop_path": "/somethingelse.jpg",
-                      "id": 9,
-                      "overview": "This is a movie.",
-                      "poster_path": "/something.jpg",
-                      "release_date": "2018",
-                      "title": "Venom",
-                      "vote_average": 6.6,
-                    },
-                  ],
-                },
-              },
-              Object {
-                "isThrow": false,
-                "value": Object {
-                  "movies": Array [
-                    Object {
-                      "backdrop_path": "/somethingelse.jpg",
-                      "id": 9,
-                      "overview": "This is a movie.",
-                      "poster_path": "/something.jpg",
-                      "release_date": "2018",
-                      "title": "Venom",
-                      "vote_average": 6.6,
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-          "subscribe": [MockFunction] {
-            "calls": Array [
-              Array [
-                [Function],
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
-        },
-        "storeSubscription": Subscription {
-          "listeners": Object {
-            "clear": [Function],
-            "get": [Function],
-            "notify": [Function],
-            "subscribe": [Function],
-          },
-          "onStateChange": [Function],
-          "parentSub": undefined,
-          "store": Object {
-            "dispatch": [MockFunction],
-            "getState": [MockFunction] {
-              "calls": Array [
-                Array [],
-                Array [],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": Object {
-                    "movies": Array [
-                      Object {
-                        "backdrop_path": "/somethingelse.jpg",
-                        "id": 9,
-                        "overview": "This is a movie.",
-                        "poster_path": "/something.jpg",
-                        "release_date": "2018",
-                        "title": "Venom",
-                        "vote_average": 6.6,
-                      },
-                    ],
-                  },
-                },
-                Object {
-                  "isThrow": false,
-                  "value": Object {
-                    "movies": Array [
-                      Object {
-                        "backdrop_path": "/somethingelse.jpg",
-                        "id": 9,
-                        "overview": "This is a movie.",
-                        "poster_path": "/something.jpg",
-                        "release_date": "2018",
-                        "title": "Venom",
-                        "vote_average": 6.6,
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-            "subscribe": [MockFunction] {
-              "calls": Array [
-                Array [
-                  [Function],
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
-          },
-          "unsubscribe": undefined,
-        },
+        "className": "movie-container",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/favorites",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

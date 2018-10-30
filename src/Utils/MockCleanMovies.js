@@ -1,4 +1,4 @@
-export default [
+export const movies = [
   {
     backdrop_path:
       'http://image.tmdb.org/t/p/w1280/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg',

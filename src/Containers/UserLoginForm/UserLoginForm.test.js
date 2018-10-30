@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { UserLoginForm, mapStateToProps, mapDispatchToProps } from './UserLoginForm';
 import { shallow } from 'enzyme';
 import * as API from "../../Utils/API/";
+import { signInUser } from '../../Actions/user-actions';
 
 describe('UserLoginForm', () => {
   let wrapper;
@@ -71,10 +72,27 @@ describe('UserLoginForm', () => {
   })
 
   describe('mapStateToProps function', () => {
-    
+    it('should return an object with the user', () => {
+      const mockState = {
+        movies: [],
+        user: {name: 'Louisa', email: 'blah@gmail.com'},
+        favorites: []
+      }
+      const expected = {
+        user: {name: 'Louisa', email: 'blah@gmail.com'}
+      }
+      const mappedProps = mapStateToProps(mockState)
+      expect(mappedProps).toEqual(expected)
+    })
   })
 
   describe('mapDispatchToProps function', () => {
-
+    it('calls dispatch with a signInUser action when userSignIn is called', () => {
+      const mockDispatch = jest.fn()
+      const mockDispatchAction = signInUser(mockUser)
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.userSignIn(mockUser)
+      expect(mockDispatch).toHaveBeenCalledWith(mockDispatchAction)
+    })
   })
 });
