@@ -1,8 +1,7 @@
 .form-wrapper {
   height: 100vh;
-  background: linear-gradient(rgb(0, 0, 0), rgba(204, 96, 96, 0.4)) , url(../../Images/photo-1517604931442-7e0c8ed2963c.jpeg);
+  background: linear-gradient(rgb(0, 0, 0), rgba(131, 130, 130, 0.8), rgba(204, 96, 96, 0.3)) , url(../../Images/photo-1517604931442-7e0c8ed2963c.jpeg);
   background-size: cover;
-  
 }
 
 .form-input {
@@ -10,27 +9,34 @@
   margin-bottom: 1em;
   font-size: 1.5em;
   font-family: 'Lato', sans-serif;
-  
 }
 
 input {
   background: none;
   border: none;
-  border-bottom: 2px solid #beb47e;
+  border-bottom: 2px solid #0496a0;
 }
+
+input::placeholder {
+  color: #170A1C;
+  text-align: left;
+}
+
 
 .user-login-form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 550px;
   justify-content: space-around;
   padding-bottom: 50px;
   flex-direction: column;
-  width: 75%;
+  width: 70%;
   margin: 4rem auto;
   font-family: 'Lato', sans-serif;
-  /* border: 1px solid white; */
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2%;
+
 }
 
 
@@ -52,14 +58,21 @@ input {
   padding-left: 20px;
   padding-top: 10px;
   width: 30rem;
+  width: 50%;
+  transition: all .2s;
+}
+
+.user-email-login:focus,
+.user-password-login:focus {
+  outline-color: #0496a0;
 }
 
 .login-button {
-  /* background-color: #beb47e; */
-  font-weight: bold;
+  background: none;
   height: 58px;
   margin-bottom: 30px;
-  width: 31.75rem;
+  width: 20rem;
+  border: 2px solid #0496a0;
 }
 
 .user-signup-link {
@@ -99,4 +112,31 @@ input {
   .user-login-form {
     margin: 1rem auto;
   }
+  width: 51.75%;
+  border: 2px solid #0496a0;
+  color: #170A1C;
+  transition: all .5s;
+}
+
+.login-button:hover {
+  background: #228CDB;
+  color: white;
+  transition: all .5s ease-in-out;
+  transform: scale(1.1); 
+}
+
+.user-signup-link {
+  border: 2px solid #0496a0;
+  padding: 4% 10%;
+  transition: all .5s;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #170A1C;
+}
+
+.user-signup-link:hover {
+  background: #C19AB7;
+  color: white;
+  transition: all .5s ease-in-out;
+  transform: scale(1.1); 
 }
