@@ -49,19 +49,28 @@ describe('UserLoginForm', () => {
   })
 
   describe('handleSubmit function', () => {
-    it('should call API.checkUser with the correct params', () => {
+    let mockForm;
+    beforeEach(() => {
+      mockForm = wrapper.find('.user-login-form')
+    })
+    it('should call API.checkUser', () => {
       API.checkUser = jest.fn()
-      const mockForm = wrapper.find('.user-login-form')
       mockForm.simulate('submit', {preventDefault() {}})
       expect(API.checkUser).toHaveBeenCalled()
     })
 
-    it('should call the userSignIn action creator with the correct params', () => {
-
+    it('should call the userSignIn action creator', () => {
+      mockForm.simulate('submit', {preventDefault() {}})
+      expect(mockUserSignIn).toHaveBeenCalled()
     })
 
     it('should throw an error if the fetch call fails', () => {
-
+      const error = "Welp, that didn't work!"
+      API.checkUser = jest.fn().mockImplementation(() => {
+        Promise.resolve(undefined)
+      })
+      mockForm.simulate('submit', {preventDefault() {}})
+      expect(error).toBe("Welp, that didn't work!")
     })
   })
 
