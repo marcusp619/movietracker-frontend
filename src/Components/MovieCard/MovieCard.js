@@ -6,7 +6,7 @@ import hollowStar from "../../Images/star.svg";
 import solidStar from "../../Images/bookmark-star.svg";
 import "./MovieCard.css";
 
-class MovieCard extends Component {
+export class MovieCard extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -106,15 +106,15 @@ class MovieCard extends Component {
   }
 }
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     user: state.user,
     movies: state.movies
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  updateMovies: movieArray => {
+export const mapDispatchToProps = dispatch => ({
+  updateMovies: (movieArray) => {
     dispatch(updateMovies(movieArray));
   }
 });
