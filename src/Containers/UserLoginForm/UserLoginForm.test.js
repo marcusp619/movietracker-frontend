@@ -33,27 +33,16 @@ describe('UserLoginForm', () => {
   })
 
   describe('handleChange function', () => {
+
     it('should set state with the correct keys and values', () => {
-      wrapper.find('.user-name-input').simulate(
-        'change', 
-        {target: 
-          {name: 'name', value: 'David'}
-        }
-      )
-      wrapper.find('.user-email-input').simulate(
-        'change', 
-        {target: 
-          {name: 'email', value: 'blah@gmail.com'}
-        }
-      )
+      const emailInput = wrapper.find('.user-email-login')
+      const passwordInput = wrapper.find('.user-password-login')
+      emailInput.simulate('change', {target: {name: 'email', value: 'blah@gmail.com'}})
+      passwordInput.simulate('change', {target: {name: 'password', value: 'oooooooooooookay'}})
 
-      // wrapper.find('.new-user-form').simulate(
-      //   'submit', 
-      //   {preventDefault() {}}
-      // )
 
-      expect(wrapper.state().name).toEqual('David')
       expect(wrapper.state().email).toEqual('blah@gmail.com')
+      expect(wrapper.state().password).toEqual('oooooooooooookay')
     })
   })
 
