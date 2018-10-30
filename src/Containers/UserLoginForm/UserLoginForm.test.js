@@ -71,7 +71,14 @@ describe('UserLoginForm', () => {
   })
 
   describe('mapStateToProps function', () => {
-    
+    it('should return an object with the user', () => {
+      const mockState = {
+        movies: [],
+        user: {name: 'Christie'},
+        favorites: []
+      }
+      
+    })
   })
 
   describe('mapDispatchToProps function', () => {
