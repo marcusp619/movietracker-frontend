@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import { NavLink, Route } from 'react-router-dom';
 import { filterMovies } from '../../Actions/';
 import './MovieContainer.css';
 import MovieCard from '../../Components/MovieCard/MovieCard';
 
-const MovieContainer = ({movies, updateMovies}) => {
-  const cards = movies.map(movie => {
+class MovieContainer extends Component {
+  constructor(props) {
+    super(props);
+
+}
+
+render() {
+  const cards = this.props.movies.map(movie => {
     return <MovieCard key={movie.id} {...movie} />;
   });
 
-  return <div className="movie-container"><button onClick={() => updateMovies(movies)}>FAVORITES</button>{cards}</div>;
+  return  (
+    <div className="movie-container">
+      <NavLink to='/favorites'
+        className='favorites-btn'
+        onClick={() => this.props.updateMovies(this.props.movies)}
+      >FAVORITES
+      </NavLink>
+      <Route exact path="/favorites" render={() => ([...cards]) }/>
+      <Route exact path="/" render={() => ([...cards]) }/>
+    </div>
+  );
+};
 };
 
 const mapStateToProps = state => {
@@ -25,5 +43,5 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieContainer);
 
+// <button onClick={() => updateMovies(movies)}>FAVORITES</button>
 
-// <a className="user-signup-link" href="/favorites" onClick={() => updateMovies(movies)}>FAVORITES</a>
