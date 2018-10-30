@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { addFavorites } from '../../Actions/favorite-actions';
 import { updateMovies } from '../../Actions/';
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router';
 import * as API from '../../Utils/API/';
 import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
@@ -109,6 +110,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(MovieCard);
+    mapStateToProps,
+    mapDispatchToProps,
+  )(MovieCard);

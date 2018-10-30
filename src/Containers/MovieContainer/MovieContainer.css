@@ -1,3 +1,10 @@
+.favorites-btn,
+.home-btn {
+  color: #c72931;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .movie-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -9,4 +16,18 @@
 .movie-container > div {
   border-bottom: double #01838c;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.nav-btn-container {
+  align-items: center;
+  background-color: rgba(190, 180, 126, 0.8);
+  border: solid 2px #c72931;
+  display: flex;
+  font-size: 1.5em;
+  height: 30px;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 80px;
+  padding: 16px;
+  width: 20%;
 }
