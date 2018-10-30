@@ -1,6 +1,6 @@
 import React from "react";
 import { signOutUser } from "../../Actions/user-actions";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import "./Header.css";
 
@@ -9,11 +9,16 @@ const Header = (props, signOutUser) => {
     <div className="header">
       <span>
         {props.user ? (
-          <i onClick={props.signOutUser} className="fas fa-sign-out-alt" />
+          <NavLink to="/">
+            <i
+              onClick={() => props.signOutUser(props.user)}
+              className="fas fa-sign-out-alt"
+            />
+          </NavLink>
         ) : (
-          <Link to="/login">
+          <NavLink to="/login">
             <i className="fas fa-sign-in-alt" />
-          </Link>
+          </NavLink>
         )}
       </span>
       <span className="app-title">
@@ -28,7 +33,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  signOutUser: () => dispatch(signOutUser())
+  signOutUser: user => dispatch(signOutUser(user))
 });
 
 export default connect(

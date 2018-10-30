@@ -3,7 +3,7 @@ const users = (state = null, action) => {
     case "SIGN_IN_USER":
       return { name: action.name, id: action.id, email: action.email };
     case "SIGN_OUT_USER":
-      return {};
+      return null;
     default:
       return state;
   }

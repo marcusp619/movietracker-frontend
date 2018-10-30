@@ -14,6 +14,6 @@ export const signInUser = user => ({
 
 export const signOutUser = user => ({
   type: "SIGN_OUT_USER",
-  user: null,
-  favorites: []
+  user: user,
+  favorites: null
 });

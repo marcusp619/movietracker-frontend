@@ -1,13 +1,13 @@
 const movies = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_MOVIES':
+    case "ADD_MOVIES":
       return [...state, ...action.movies];
-    case 'UPDATE_MOVIES':
+    case "UPDATE_MOVIES":
       return [...action.movies];
-    case 'FILTER_MOVIES':
-      return action.movies.filter(film => film.favorite === true)
-    case 'CLEAR_MOVIES':
-      return []
+    case "FILTER_MOVIES":
+      return action.movies.filter(film => film.favorite === true);
+    case "CLEAR_MOVIES":
+      return [];
     default:
       return state;
   }
