@@ -49,7 +49,9 @@ export class UserLoginForm extends Component {
             placeholder="Enter Password"
           />
           <button className="login-button">Go To Movies!</button>
-          <a className="user-signup-link" href="/newuser">New User Sign Up</a>
+          <a className="user-signup-link" href="/newuser">
+            New User Sign Up
+          </a>
         </form>
       </div>
     );

@@ -1,24 +1,42 @@
-import React from 'react';
-import './Header.css';
+import React from "react";
+import { signOutUser } from "../../Actions/user-actions";
+import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import "./Header.css";
 
-const Header = (props) => {
+const Header = (props, signOutUser) => {
   return (
     <div className="header">
       <span>
-        <i className="fas fa-sign-out-alt"></i>
+        {props.user ? (
+          <NavLink to="/">
+            <i
+              onClick={() => props.signOutUser(props.user)}
+              className="fas fa-sign-out-alt"
+            />
+          </NavLink>
+        ) : (
+          <NavLink to="/login">
+            <i className="fas fa-sign-in-alt" />
+          </NavLink>
+        )}
       </span>
       <span className="app-title">
         <span className="sparkle">MovieTracker</span>
       </span>
     </div>
-
-//signOutUser action creator function must be called
-//need onClick function that dispatches the signout action object
-//action object applied by users reducer
-//reducer updates global state object with blank string value for the user key
-
   );
 };
 
+const mapStateToProps = state => ({
+  user: state.user
+});
 
-export default Header;
+const mapDispatchToProps = dispatch => ({
+  signOutUser: user => dispatch(signOutUser(user))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header);
