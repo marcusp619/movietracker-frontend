@@ -21,6 +21,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Route exact path="/newuser" component={NewUserForm} />
+        <Route exact path="/favorites" render={() => <MovieContainer />} />
         <Route
           exact
           path="/"

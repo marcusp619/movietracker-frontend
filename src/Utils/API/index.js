@@ -50,7 +50,7 @@ export const getFavorites = async userId => {
   return result.data;
 };
 
-export const removeFavorites = async (favInfo) => { 
+export const removeFavorite = async (favInfo) => { 
   try {
     const response = await fetch(`http://localhost:3000/api/users/${favInfo.user_id}/favorites/${favInfo.movie_id}`, {
         method: 'DELETE',
