@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { UserLoginForm } from './UserLoginForm';
 import { shallow } from 'enzyme';
-
+import * as API from "../../Utils/API/";
 
 describe('UserLoginForm', () => {
   let wrapper;
@@ -12,6 +12,10 @@ describe('UserLoginForm', () => {
     id: 1806,
     email: 'Louisa@turing.io',
     password: 'oooooooooooookay'
+  }
+  const mockState = {
+    email: 'Louisa',
+    password: 'blah@gmail.com',
   }
 
   beforeEach(() => {
@@ -33,13 +37,11 @@ describe('UserLoginForm', () => {
   })
 
   describe('handleChange function', () => {
-
     it('should set state with the correct keys and values', () => {
       const emailInput = wrapper.find('.user-email-login')
       const passwordInput = wrapper.find('.user-password-login')
       emailInput.simulate('change', {target: {name: 'email', value: 'blah@gmail.com'}})
       passwordInput.simulate('change', {target: {name: 'password', value: 'oooooooooooookay'}})
-
 
       expect(wrapper.state().email).toEqual('blah@gmail.com')
       expect(wrapper.state().password).toEqual('oooooooooooookay')
@@ -47,8 +49,11 @@ describe('UserLoginForm', () => {
   })
 
   describe('handleSubmit function', () => {
-    it('should call checkUser with the correct params', () => {
-
+    it('should call API.checkUser with the correct params', () => {
+      API.checkUser = jest.fn()
+      const mockForm = wrapper.find('.user-login-form')
+      mockForm.simulate('submit', {preventDefault() {}})
+      expect(API.checkUser).toHaveBeenCalled()
     })
 
     it('should call the userSignIn action creator with the correct params', () => {

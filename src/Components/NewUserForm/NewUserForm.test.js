@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import NewUserForm from './NewUserForm';
 import {shallow} from 'enzyme';
+import * as API from "../../Utils/API/";
 
 describe('NewUserForm', () => {
   let wrapper;
@@ -39,7 +40,10 @@ describe('NewUserForm', () => {
 
   describe('handleSubmit function', () => {
     it('should call postNewUser with the correct params', () => {
-
+      API.postNewUser = jest.fn()
+      const mockForm = wrapper.find('.new-user-form')
+      mockForm.simulate('submit', {preventDefault() {}})
+      expect(API.postNewUser).toHaveBeenCalled()
     })
 
     it('should set state with hasError as true if fetch call fails', () => {
