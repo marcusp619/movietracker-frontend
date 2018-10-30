@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { addFavorites } from "../../Actions/favorite-actions";
 import { updateMovies } from "../../Actions/";
 import { connect } from "react-redux";
 import * as API from "../../Utils/API/";
