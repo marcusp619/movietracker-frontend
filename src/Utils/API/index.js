@@ -18,6 +18,9 @@ export const postNewUser = async newUserInfo => {
 };
 
 export const checkUser = async userInfo => {
+  if (!userInfo) {
+    throw Error("No userInfo!");
+  }
   const response = await fetch("http://localhost:3000/api/users", {
     method: "POST",
     body: JSON.stringify(userInfo),
@@ -50,20 +53,24 @@ export const getFavorites = async userId => {
   return result.data;
 };
 
-export const removeFavorite = async (favInfo) => { 
+export const removeFavorite = async favInfo => {
   try {
-    await fetch(`http://localhost:3000/api/users/${favInfo.user_id}/favorites/${favInfo.movie_id}`, {
-        method: 'DELETE',
+    const response = await fetch(
+      `http://localhost:3000/api/users/${favInfo.user_id}/favorites/${
+        favInfo.movie_id
+      }`,
+      {
+        method: "DELETE",
         body: JSON.stringify({
           movie_id: favInfo.movie_id,
-          user_id: favInfo.user_id,
+          user_id: favInfo.user_id
         }),
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         }
-      })
+      }
+    );
+  } catch (error) {
+    console.log(error.message);
   }
-  catch (error) {
-    console.log(error.message)
-  }
-}
+};

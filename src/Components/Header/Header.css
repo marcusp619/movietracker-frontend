@@ -2,7 +2,7 @@
   margin-bottom: 5rem;
 }
 
-.fa-sign-out-alt {
+.fa-sign-out-alt, .fa-sign-in-alt {
   color: #0496a0;
   font-size: 1.5em;
   display: block;
@@ -10,7 +10,8 @@
   padding: 2em;
 }
 
-.fa-sign-out-alt:hover {
+.fa-sign-out-alt:hover,
+.fa-sign-in-alt:hover {
   color: #fff;
   cursor: pointer;
 }
