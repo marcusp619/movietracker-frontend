@@ -15,7 +15,11 @@ describe('NewUserForm', () => {
   });
 
   it('should have the correct default state', () => {
-    
+    expect(wrapper.state().name).toEqual('')
+    expect(wrapper.state().email).toEqual('')
+    expect(wrapper.state().password).toEqual('')
+    expect(wrapper.state().favorites).toEqual([])
+    expect(wrapper.state().hasError).toEqual(false)
   })
 
   describe('handleChange function', () => {

@@ -15,7 +15,12 @@ describe('UserLoginForm', () => {
   }
 
   beforeEach(() => {
-    wrapper = shallow(<UserLoginForm userSignIn={mockUserSignIn} user={mockUser} />);
+    wrapper = shallow(
+                <UserLoginForm 
+                  userSignIn={mockUserSignIn} 
+                  user={mockUser} 
+                />
+              );
   });
 
   it('should match the snapshot', () => {
@@ -29,7 +34,26 @@ describe('UserLoginForm', () => {
 
   describe('handleChange function', () => {
     it('should set state with the correct keys and values', () => {
+      wrapper.find('.user-name-input').simulate(
+        'change', 
+        {target: 
+          {name: 'name', value: 'David'}
+        }
+      )
+      wrapper.find('.user-email-input').simulate(
+        'change', 
+        {target: 
+          {name: 'email', value: 'blah@gmail.com'}
+        }
+      )
 
+      // wrapper.find('.new-user-form').simulate(
+      //   'submit', 
+      //   {preventDefault() {}}
+      // )
+
+      expect(wrapper.state().name).toEqual('David')
+      expect(wrapper.state().email).toEqual('blah@gmail.com')
     })
   })
 

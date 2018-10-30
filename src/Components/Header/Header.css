@@ -7,7 +7,7 @@
   font-size: 1.5em;
   display: block;
   text-align: right;
-  padding: 1em;
+  padding: 2em;
 }
 
 .fa-sign-out-alt:hover {
@@ -99,42 +99,58 @@
   100% { opacity: 0; }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1050px) {
   .app-title {
     font-size: 6.5em;
   }
 }
 
-@media (max-width: 930px) {
+@media (max-width: 950px) {
   .app-title {
-    font-size: 5.5em;
+    font-size: 5.75em;
     text-shadow: 5px 0 #01838c;
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 850px) {
   .app-title {
-    font-size: 4.5em;
+    font-size: 5em;
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 750px) {
   .app-title {
-    font-size: 3.5em;
+    font-size: 4em;
     text-shadow: 4px 0 #01838c;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .app-title {
-    font-size: 2.5em;
+    font-size: 3.5em;
+    text-shadow: 3px 0 #01838c;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .app-title {
+    font-size: 3em;
     text-shadow: 3px 0 #01838c;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   .app-title {
     font-size: 2em;
   }
+
+  .header {
+    margin-bottom: 1rem;
+  }
 }
+
 
