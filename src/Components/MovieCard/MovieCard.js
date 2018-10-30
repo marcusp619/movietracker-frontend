@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { addFavorites } from '../../Actions/favorite-actions';
 import { updateMovies } from '../../Actions/';
 import { connect } from 'react-redux';
-import {withRouter} from 'react-router';
 import * as API from '../../Utils/API/';
 import hollowStar from '../../Images/star.svg';
 import solidStar from '../../Images/bookmark-star.svg';
@@ -75,7 +73,6 @@ class MovieCard extends Component {
       API.addFav(favoriteMovie)
     } else if (this.state.favorite) {
       API.removeFavorite(favoriteMovie)
-      this.toggleFavoriteInState()
     }
   }
 
@@ -90,7 +87,10 @@ class MovieCard extends Component {
             alt="Favorite not selected"
           />
           <img src={this.props.poster_path} alt="movie poster" />
-          <h1>{this.props.title}</h1>
+          <h1 className="movie-title">{this.props.title}</h1>
+          <p className="movie-info">{this.props.release_date}</p>
+          <p className="movie-info">{this.props.vote_average}</p>
+          <p className="movie-info">{this.props.overview}</p>
         </div>
       );
   }

@@ -1,3 +1,12 @@
+.movie-card {
+  position: relative;
+}
+
+.movie-info {
+  color: #bdcdcd;
+  font-family: 'Lato', sans-serif;
+}
+
 .movie-poster:hover {
   box-shadow: #eaffea 0px 0px 20px 5px;
   cursor: pointer;
@@ -14,7 +23,10 @@
   border: solid 2px #c72931;
   bottom: 404px;
   height: 40px;
+  left: 270px;
   margin: 2px;
+  position: absolute;
+  top: -2px;
   width: 40px;
 }
 
