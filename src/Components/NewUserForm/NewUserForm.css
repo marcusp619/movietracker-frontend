@@ -4,7 +4,8 @@ h2, h3, label {
 
 .form-wrapper {
   height: 100vh;
-  background: #000;
+  background: url(../../Images/photo-1517604931442-7e0c8ed2963c.jpeg);
+  background-size: cover;
 }
 
 .form-input {
