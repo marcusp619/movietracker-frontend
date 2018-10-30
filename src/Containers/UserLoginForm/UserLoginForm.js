@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as API from "../../Utils/API/";
 import "./UserLoginForm.css";
 
-class UserLoginForm extends Component {
+export class UserLoginForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,11 +56,11 @@ class UserLoginForm extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   user: state.user
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   userSignIn: user => {
     dispatch(signInUser(user));
   }

@@ -23,6 +23,7 @@ class NewUserForm extends Component {
     e.preventDefault();
     const result = await API.postNewUser(this.state);
     if (result.error) {
+      console.log('We in here!')
       this.setState({hasError: true});
     } else {
     }
