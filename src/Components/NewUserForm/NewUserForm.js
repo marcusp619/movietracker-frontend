@@ -22,8 +22,9 @@ class NewUserForm extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const result = await API.postNewUser(this.state);
+    console.log(result)
     if (result.error) {
-      console.log('We in here!')
+      console.log(result)
       this.setState({hasError: true});
     } else {
     }
