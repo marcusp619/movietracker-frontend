@@ -19,7 +19,7 @@ input {
 
 input::placeholder {
   color: #170A1C;
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -31,10 +31,10 @@ input::placeholder {
   justify-content: space-around;
   padding-bottom: 50px;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
   margin: 4rem auto;
   font-family: 'Lato', sans-serif;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 2%;
 
 }
