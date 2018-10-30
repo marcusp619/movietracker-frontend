@@ -5,21 +5,68 @@ import { addFavorite } from '../Actions/favorite-actions';
 import * as UserActions from '../Actions/user-actions';
 
 describe('Movie Reducer', () => {
+  let mockAction;
+  let mockPayload;
+  let result;
+
   it('should return original state as default', () => {
-    let result = movies(undefined, {type: 'NONE'});
+    result = movies(undefined, {type: 'NONE'});
     expect(result).toEqual([]);
   });
 
   it('should add a movie to state', () => {
-    let mockAction = {
+    mockAction = {
       type: 'ADD_MOVIES',
       movies: [{title: 'A Star is Born', vote_average: 5}],
     };
-    let mockPayload = {title: 'A Star is Born', vote_average: 5};
-    let result = movies(undefined, mockAction);
+    mockPayload = {title: 'A Star is Born', vote_average: 5};
+    result = movies(undefined, mockAction);
 
     expect(result).toEqual([mockPayload]);
   });
+
+  it('should update the favorite status of a movie', () => {
+    mockAction = {
+      type: 'UPDATE_MOVIES',
+      movies: [{title: 'A Star is Born', vote_average: 5}]
+    }
+    mockPayload = {title: 'A Star is Born', vote_average: 5}
+    result = movies([], mockAction);
+
+    expect(result).toEqual([mockPayload])
+  })
+
+  it('should filter through all movies to return only favorites', () => {
+    mockAction = {
+      type: 'FILTER_MOVIES',
+      movies: [
+        {title: 'A Star is Born', vote_average: 5, favorite: false},
+        {title: 'Night School', vote_average: 7.2, favorite: true},
+        {title: 'Halloween', vote_average: 4.5, favorite: false},
+        {title: 'Venom', vote_average: 5.7, favorite: true},
+      ]
+    }
+    mockPayload = {title: 'A Star is Born', vote_average: 5}
+    result = movies([], mockAction)
+
+    expect(result).toHaveLength(2)
+  })
+
+  it('should clear out the movies array in global state', () => {
+    mockAction = {
+      type: 'CLEAR_MOVIES'
+    }
+    const mockState = [
+      {title: 'A Star is Born', vote_average: 5, favorite: false},
+      {title: 'Night School', vote_average: 7.2, favorite: true},
+      {title: 'Halloween', vote_average: 4.5, favorite: false},
+      {title: 'Venom', vote_average: 5.7, favorite: true},
+    ]
+    mockPayload = []
+    result = movies(mockState, mockAction)
+
+    expect(result).toEqual(mockPayload)
+  })
 });
 
 
