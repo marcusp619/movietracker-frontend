@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import "./Header.css";
 
-const Header = (props, signOutUser) => {
+export const Header = (props, signOutUser) => {
   return (
     <div className="header">
       <span>
@@ -28,11 +28,11 @@ const Header = (props, signOutUser) => {
   );
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   user: state.user
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   signOutUser: user => dispatch(signOutUser(user))
 });
 

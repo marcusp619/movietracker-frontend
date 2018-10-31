@@ -95,24 +95,23 @@ describe("Movie Reducer", () => {
       const mockUser = {
         name: "Tony Stark",
         id: 12,
-        email: "tony.stark@starkindustries.com",
-        favorites: [
-          {
-            title: "Night School",
-            id: 23457,
-            overview: "Some people go to night school and hijinx ensues",
-            poster_path: "http://randomPosterPath.jpg",
-            release_date: "2018-10-28",
-            vote_average: 6.6
-          }
-        ]
-      };
-      const mockAction = UserActions.signOutUser(mockUser);
-      const expected = null;
+        email: 'tony.stark@starkindustries.com',
+        favorites: [{
+          title: 'Night School', 
+          id: 23457, 
+          overview: 'Some people go to night school and hijinx ensues', 
+          poster_path: 'http://randomPosterPath.jpg', 
+          release_date: '2018-10-28', 
+          vote_average: 6.6
+        }]
+      }
+      const mockState = [mockUser]
+      const mockAction = UserActions.signOutUser(mockUser)
+      const expected = null
 
-      const result = users(mockUser, mockAction);
+      const result = users(mockUser, mockAction)
 
-      expect(result).toEqual(expected);
-    });
-  });
-});
+      expect(result).toEqual(expected)
+    })
+  })
+})

@@ -22,10 +22,10 @@ class NewUserForm extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const result = await API.postNewUser(this.state);
+    debugger
     if (result.error) {
       this.setState({hasError: true});
-    } else {
-    }
+    } 
   };
 
   render() {
