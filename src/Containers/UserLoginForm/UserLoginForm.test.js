@@ -87,7 +87,7 @@ describe('UserLoginForm', () => {
   })
 
   describe('mapDispatchToProps function', () => {
-    it('calls dispatch with a signInUser action when userSignIn is called', () => {
+    it('should call dispatch with a signInUser action when userSignIn is called', () => {
       const mockDispatch = jest.fn()
       const mockDispatchAction = signInUser(mockUser)
       const mappedProps = mapDispatchToProps(mockDispatch)
