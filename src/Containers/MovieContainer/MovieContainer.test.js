@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { MovieContainer, mapStateToProps, mapDispatchToProps} from './MovieContainer';
 import { shallow } from 'enzyme';
+import * as mockDataCleaner from '../../Utils/Cleaners/'
 
 describe('MovieContainer', () => {
   let wrapper;
@@ -65,9 +66,24 @@ describe('MovieContainer', () => {
         addMovies={mockAddMovies}
         clearMovies={mockClearMovies} />)
   })
-
   
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe('resetMovies function', () => {
+    it('should call cleanMovieData', async () => {
+      mockDataCleaner.cleanMovieData = jest.fn()
+      wrapper.instance().resetMovies()
+      await expect(mockDataCleaner.cleanMovieData).toHaveBeenCalled()
+    })
+
+    it('should call clearMovies', () => {
+
+    })
+
+    it('should call addMovies with the correct params', () => {
+
+    })
+  })
 });
