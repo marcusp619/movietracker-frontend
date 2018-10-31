@@ -1,3 +1,8 @@
+.image-container {
+  height: 450px;
+  width: 300px;
+}
+
 .movie-card {
   position: relative;
 }
@@ -5,6 +10,8 @@
 .movie-info {
   color: #bdcdcd;
   font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 .movie-poster:hover {
@@ -21,10 +28,10 @@
 .star-icon {
   bottom: 404px;
   height: 40px;
-  left: 270px;
+  left: 252px;
   margin: 2px;
   position: absolute;
-  top: -2px;
+  top: 4px;
   width: 40px;
 }
 

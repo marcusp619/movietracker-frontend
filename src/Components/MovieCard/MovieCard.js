@@ -5,6 +5,7 @@ import * as API from "../../Utils/API/";
 import hollowStar from "../../Images/star.svg";
 import solidStar from "../../Images/bookmark-star.svg";
 import "./MovieCard.css";
+import PropTypes from 'prop-types';
 
 export class MovieCard extends Component {
   constructor(props) {
@@ -93,14 +94,16 @@ export class MovieCard extends Component {
     const { favorite } = this.state;
     return (
       <div className="movie-card">
-        <img
-          className="star-icon"
-          onClick={this.handleClick}
-          src={!favorite ? hollowStar : solidStar}
-          alt="Favorite not selected"
-        />
-        <img src={this.props.poster_path} alt="movie poster" />
-        <h1>{this.props.title}</h1>
+        <div className="image-container">
+          <img
+            className="star-icon"
+            onClick={this.handleClick}
+            src={!favorite ? hollowStar : solidStar}
+            alt="Favorite not selected"
+          />
+          <img src={this.props.poster_path} alt="movie poster" />
+        </div>
+        <h1 className="movie-info">{this.props.title}</h1>
       </div>
     );
   }
@@ -118,6 +121,15 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(updateMovies(movieArray));
   }
 });
+
+MovieCard.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  poster_path: PropTypes.string,
+  release_date: PropTypes.string,
+  vote_average: PropTypes.number,
+  overview:  PropTypes.string
+}
 
 export default connect(
   mapStateToProps,
