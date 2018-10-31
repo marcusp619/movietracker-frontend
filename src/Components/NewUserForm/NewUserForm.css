@@ -4,60 +4,81 @@ h2, h3, label {
 
 .form-wrapper {
   height: 100vh;
-  background: url(../../Images/photo-1517604931442-7e0c8ed2963c.jpeg);
+  background: linear-gradient(rgb(0, 0, 0), rgba(131, 130, 130, 0.8), rgba(204, 96, 96, 0.3)) , url(../../Images/photo-1517604931442-7e0c8ed2963c.jpeg);
   background-size: cover;
 }
 
 .form-input {
   height: 1.5em;
-  margin-bottom: 1em;
-  /*font-size: 1.5em;*/
+  font-size: 1.5em;
   font-family: 'Lato', sans-serif;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0496a0;
+}
+
+input::placeholder {
+  color: #170A1C;
+  text-align: center;
 }
 
 .new-user-form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 550px;
   justify-content: space-around;
   padding-bottom: 50px;
   flex-direction: column;
-  width: 75%;
+  width: 60%;
   margin: 4rem auto;
-  background: #000;
   font-family: 'Lato', sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2%;
+
 }
 
-.user-name-input,
 .user-email-input,
 .user-password-input,
 .signup-button {
-  border-radius: 14px;
   font-size: 1.5em;
+}
+
+.user-email-input,
+.user-password-input {
   height: 40px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-top: 10px;
   width: 30rem;
+  width: 50%;
+  transition: all .2s;
 }
 
-.user-name-input {
-  margin-top: 30px;
+.user-email-input:focus,
+.user-password-input:focus {
+  outline-color: #0496a0;
 }
 
 .signup-button {
-  background-color: #beb47e;
-  font-weight: bold;
+  background: none;
   height: 58px;
   margin-bottom: 30px;
-  width: 31.75rem;
+  width: 20rem;
+  border: 2px solid #0496a0;
+}
+
+.user-signup-link {
+  font-size: 1.5em;
 }
 
 @media (max-width: 600px) {
-  .user-name-input,
   .user-email-input,
   .user-password-input {
+    font-size: 1em;
     height: 30px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -71,13 +92,9 @@ h2, h3, label {
     width: 86.75%;
   }
 
-  .user-login-form {
+  .new-user-form {
     margin: 3rem auto;
     width: 85%;
-  }
-
-  .form-input {
-    font-size: 1em;
   }
 }
 
@@ -91,5 +108,33 @@ h2, h3, label {
   .new-user-form {
     margin: 1rem auto;
   }
+  width: 51.75%;
+  border: 2px solid #0496a0;
+  color: #170A1C;
+  transition: all .5s;
 }
 
+.signup-button:hover {
+  background: #23001E;
+  border: none;
+  color: white;
+  transition: all .5s ease-in-out;
+  transform: scale(1.1); 
+}
+
+.user-signup-link {
+  border: 2px solid #0496a0;
+  padding: 4% 10%;
+  transition: all .5s;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #170A1C;
+}
+
+.user-signup-link:hover {
+  background: #EF5B5B;
+  color: white;
+  border: none;
+  transition: all .5s ease-in-out;
+  transform: scale(1.1); 
+}

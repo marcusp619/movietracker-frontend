@@ -19,8 +19,6 @@
   font-weight: 400;
 }
 .star-icon {
-  background-color: rgba(190, 180, 126, 0.8);
-  border: solid 2px #c72931;
   bottom: 404px;
   height: 40px;
   left: 270px;
@@ -31,8 +29,8 @@
 }
 
 .fav-star-icon {
-  background-color: rgba(190, 180, 126, 100);
-  border: solid 2px #c72931;
+  background-color: rgb(255, 255, 255);
+  border: solid 2px white;
   bottom: 404px;
   height: 40px;
   margin: 2px;
