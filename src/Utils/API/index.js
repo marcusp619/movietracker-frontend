@@ -27,7 +27,6 @@ export const checkUser = async userInfo => {
     headers: { "Content-Type": "application/json" }
   });
   const result = await response.json();
-  console.log(result);
   const { name, email, id } = result.data;
   return { name, email, id };
 };
