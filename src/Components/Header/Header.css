@@ -92,7 +92,7 @@
 
 .sparkle::after {
   top: 0.32em;
-  right: -5px;
+  right: 0px;
 }
 
 @-webkit-keyframes flare {
