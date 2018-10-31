@@ -5,13 +5,13 @@ import { shallow } from 'enzyme';
 import * as mockDataCleaner from '../../Utils/Cleaners/';
 import { addMovies, filterMovies, clearMovies } from '../../Actions/';
 
-describe('MovieContainer', () => {
+describe("MovieContainer", () => {
   let wrapper;
   const mockUser = {
-    name: 'Louisa',
+    name: "Louisa",
     id: 1806,
-    email: 'Louisa@turing.io',
-    password: 'oooooooooooookay'
+    email: "Louisa@turing.io",
+    password: "oooooooooooookay"
   };
   const mockMovies = [
     {

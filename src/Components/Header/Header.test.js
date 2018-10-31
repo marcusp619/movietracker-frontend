@@ -4,7 +4,7 @@ import { Header, mapStateToProps, mapDispatchToProps } from './Header';
 import { signOutUser } from '../../Actions/user-actions';
 import { shallow } from 'enzyme';
 
-describe('Header Component', () => {
+describe("Header Component", () => {
   let wrapper;
   const mockUser = {
     name: 'Louisa',
@@ -42,7 +42,7 @@ describe('Header Component', () => {
       const mappedProps = mapStateToProps(mockState)
       expect(mappedProps).toEqual(expected)
     })
-  })
+  })  
 
   describe('mapDispatchToProps function', () => {
     it('should call dispatch with a signOutUser action when signOutUser is called', () => {
@@ -53,5 +53,5 @@ describe('Header Component', () => {
       expect(mockDispatch).toHaveBeenCalledWith(mockDispatchAction)
     })
   })
-
 })
+

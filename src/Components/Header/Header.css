@@ -2,7 +2,8 @@
   margin-bottom: 5rem;
 }
 
-.fa-sign-out-alt, .fa-sign-in-alt {
+.fa-sign-out-alt,
+.fa-sign-in-alt {
   color: #0496a0;
   font-size: 1.5em;
   display: block;
@@ -25,9 +26,10 @@
     to(#066168)
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 7em;
   font-weight: 900;
   position: relative;
@@ -39,7 +41,9 @@
 .app-title::before {
   background-position: -180px;
   -webkit-animation: flare 5s infinite;
+  animation: flare 5s infinite;
   -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
   background-image: linear-gradient(
     65deg,
     transparent 20%,
@@ -49,8 +53,9 @@
     transparent 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  content: 'MovieTracker';
+  content: "MovieTracker";
   color: #fff;
   display: block;
   padding-right: 140px;
@@ -60,12 +65,14 @@
 .sparkle::after,
 .sparkle::before {
   -webkit-animation: sparkle 5s infinite;
+  animation: sparkle 5s infinite;
   -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff,
     0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
-  content: '';
+  content: "";
   display: block;
   height: 10px;
   opacity: 0.7;
@@ -75,6 +82,7 @@
 
 .sparkle::before {
   -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
   height: 7px;
   left: 0.1em;
   top: 0.9em;
@@ -87,17 +95,63 @@
 }
 
 @-webkit-keyframes flare {
-  0% { background-position: -180px; }
-  30% { background-position: 700px; }
-  100% { background-position: 700px; }
+  0% {
+    background-position: -180px;
+  }
+  30% {
+    background-position: 700px;
+  }
+  100% {
+    background-position: 700px;
+  }
+}
+
+@keyframes flare {
+  0% {
+    background-position: -180px;
+  }
+  30% {
+    background-position: 700px;
+  }
+  100% {
+    background-position: 700px;
+  }
 }
 
 @-webkit-keyframes sparkle {
-  0%   { opacity: 0; }
-  30%  { opacity: 0; }
-  40%  { opacity: 0.8; }
-  60%  { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -153,5 +207,3 @@
     margin-bottom: 1rem;
   }
 }
-
-
