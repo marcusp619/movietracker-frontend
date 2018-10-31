@@ -3,7 +3,17 @@
 exports[`Header Component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__unrendered__): <Header
+    signOutUser={[MockFunction]}
+    user={
+      Object {
+        "email": "Louisa@turing.io",
+        "id": 1806,
+        "name": "Louisa",
+        "password": "oooooooooooookay",
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,9 +29,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <span>
-          <i
-            className="fas fa-sign-out-alt"
-          />
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/"
+          >
+            <i
+              className="fas fa-sign-out-alt"
+              onClick={[Function]}
+            />
+          </NavLink>
         </span>,
         <span
           className="app-title"
@@ -42,21 +59,45 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <i
-            className="fas fa-sign-out-alt"
-          />,
+          "children": <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/"
+          >
+            <i
+              className="fas fa-sign-out-alt"
+              onClick={[Function]}
+            />
+          </NavLink>,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "className": "fas fa-sign-out-alt",
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": <i
+              className="fas fa-sign-out-alt"
+              onClick={[Function]}
+            />,
+            "to": "/",
           },
           "ref": null,
-          "rendered": null,
-          "type": "i",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-sign-out-alt",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "type": [Function],
         },
         "type": "span",
       },
@@ -98,9 +139,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <span>
-            <i
-              className="fas fa-sign-out-alt"
-            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/"
+            >
+              <i
+                className="fas fa-sign-out-alt"
+                onClick={[Function]}
+              />
+            </NavLink>
           </span>,
           <span
             className="app-title"
@@ -121,21 +169,45 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <i
-              className="fas fa-sign-out-alt"
-            />,
+            "children": <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/"
+            >
+              <i
+                className="fas fa-sign-out-alt"
+                onClick={[Function]}
+              />
+            </NavLink>,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "className": "fas fa-sign-out-alt",
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": <i
+                className="fas fa-sign-out-alt"
+                onClick={[Function]}
+              />,
+              "to": "/",
             },
             "ref": null,
-            "rendered": null,
-            "type": "i",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fas fa-sign-out-alt",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": [Function],
           },
           "type": "span",
         },
