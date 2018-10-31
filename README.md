@@ -35,5 +35,6 @@ This project was created working with the [The Movie DB API](https://www.themovi
 ![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/New-User-Sign-Up-Screen.png?raw=true)
 
 ## Desktop View
-
-## Mobile View
+![MainScreen](https://github.com/marcusp619/movietracker-frontend/blob/master/Screenshots/Screen%20Shot%202018-10-31%20at%208.52.26%20AM.png?raw=true)
+![LoginScreen](https://github.com/marcusp619/movietracker-frontend/blob/master/Screenshots/Screen%20Shot%202018-10-31%20at%208.52.53%20AM.png?raw=true)
+![NewUser](https://github.com/marcusp619/movietracker-frontend/blob/master/Screenshots/Screen%20Shot%202018-10-31%20at%208.53.26%20AM.png?raw=true)

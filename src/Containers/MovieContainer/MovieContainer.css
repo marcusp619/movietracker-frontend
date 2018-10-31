@@ -1,16 +1,33 @@
 .favorites-btn,
 .home-btn {
-  color: #c72931;
+  color: #00858e;
   font-weight: bold;
   text-decoration: none;
 }
 
+.favorites-btn:hover,
+.home-btn:hover {
+  color: #000;
+}
+
+.nav-btn-container:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ecf0ef),
+    to(#066168)
+  );
+  color: #000;
+}
+
 .movie-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 331px)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 345px)); 
   grid-row-gap: 3rem;
   grid-column-gap: 1rem;
-  margin: 1rem 2rem;
+  margin: 2rem auto;
+  width: 90%;
 }
 
 .movie-container > div {
@@ -20,8 +37,8 @@
 
 .nav-btn-container {
   align-items: center;
-  background-color: rgba(190, 180, 126, 0.8);
-  border: solid 2px #c72931;
+  /*background-color: rgba(190, 180, 126, 0.8);*/
+  border: solid 2px #00858e;
   display: flex;
   font-size: 1.5em;
   height: 30px;

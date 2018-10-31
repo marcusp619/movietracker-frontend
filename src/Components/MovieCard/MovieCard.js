@@ -27,7 +27,7 @@ export class MovieCard extends Component {
         this.setState({ favorite: true });
         this.toggleFavoriteInState();
       } else {
-        return;
+        return null; //not sure about this one.. return;
       }
     });
   };

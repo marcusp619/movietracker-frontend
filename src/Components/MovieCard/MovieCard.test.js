@@ -12,11 +12,11 @@ describe('MovieCard', () => {
   const store = jest.fn()
   
   beforeEach(() => {
-    wrapper = shallow(<MovieCard key={1} {...mockMovie} />)
+    wrapper = shallow(<MovieCard key={1} {...mockMovie} />);
   });
 
-  it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
+  it("should match the snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
   describe('mapFavorites', () => {
@@ -81,3 +81,4 @@ describe('MovieCard', () => {
     })
   })
 });
+
