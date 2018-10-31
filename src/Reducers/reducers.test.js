@@ -108,7 +108,7 @@ describe("Movie Reducer", () => {
         ]
       };
       const mockAction = UserActions.signOutUser(mockUser);
-      const expected = {};
+      const expected = null;
 
       const result = users(mockUser, mockAction);
 

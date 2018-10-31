@@ -51,11 +51,12 @@ describe("User Actions Creators", () => {
     it("should have a type of SIGN_OUT_USER", () => {
       const expectedAction = {
         type: "SIGN_OUT_USER",
-        email: "tupac@thuglife.com",
+        mockUser, 
         favorites: [
-          { title: "Gone With The Wind" },
-          { title: "Teen Titans Go - The Movie" },
-          { title: "Belly" }
+        { title: "Gone With The Wind" },
+        { title: "Teen Titans Go - The Movie" },
+        { title: "Belly" },
+
         ]
       };
 
