@@ -47,13 +47,19 @@ describe('User Actions Creators', () => {
   describe('signOutUser action creator', () => {
     it('should have a type of SIGN_OUT_USER', () => {
       const expectedAction = {
-        type: 'SIGN_OUT_USER',
-        email: 'tupac@thuglife.com',
-        favorites: [
-          {title: 'Gone With The Wind'}, 
-          {title: 'Teen Titans Go - The Movie'}, 
-          {title: 'Belly'}
-        ]
+        favorites: null, 
+        type: "SIGN_OUT_USER", 
+        user: {
+          email: "tupac@thuglife.com", 
+          favorites: [
+            {"title": "Gone With The Wind"}, 
+            {"title": "Teen Titans Go - The Movie"}, 
+            {"title": "Belly"}
+          ], 
+          id: 1, 
+          name: "Tupac Shakur", 
+          password: "onlyGodCanJudgeMe"
+        }
       }
 
       const result = UserActions.signOutUser(mockUser)
