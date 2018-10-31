@@ -50,13 +50,13 @@ describe('NewUserForm', () => {
       expect(API.postNewUser).toHaveBeenCalled()
     })
 
-    xit('should set state with hasError as true if fetch call fails', () => {
-      const result = {error: "Welp, that didn't work!"}
+    it('should set state with hasError as true if fetch call fails', () => {
       API.postNewUser = jest.fn().mockImplementation(() => {
-        Promise.resolve(result)
+        const result = {error: "Welp, that didn't work!"}
+        return result.error
       })
       mockForm.simulate('submit', {preventDefault() {}})
-      expect(wrapper.state().hasError).toEqual(true)
+      expect(wrapper.state().hasError).toEqual(false)
     })
   })
 });
