@@ -78,12 +78,30 @@ describe('MovieContainer', () => {
       await expect(mockDataCleaner.cleanMovieData).toHaveBeenCalled()
     })
 
-    it('should call clearMovies', () => {
-
+    it('should call clearMovies', async () => {
+      wrapper.instance().resetMovies()
+      await expect(mockClearMovies).toHaveBeenCalled()
     })
 
-    it('should call addMovies with the correct params', () => {
-
+    it('should call addMovies with the correct params', async () => {
+      const mockMovieInfo = {
+        backdrop_path:
+          'http://image.tmdb.org/t/p/w1280/f4E0ocYeToEuXvczZv6QArrMDJ.jpg',
+        id: 346910,
+        overview:
+          'From the outer reaches of space to the small-town streets of suburbia, the hunt comes home. Now, the universe’s most lethal hunters are stronger, smarter and deadlier than ever before, having genetically upgraded themselves with DNA from other species. When a young boy accidentally triggers their return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.',
+        poster_path:
+          'https://image.tmdb.org/t/p/w300_and_h450_bestv2/wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg',
+        release_date: '2018-09-13',
+        title: 'The Predator',
+        vote_average: 5.3,
+        favorite: false,
+      }
+      mockDataCleaner.cleanMovieData = jest.fn().mockImplementation(() => {
+        Promise.resolve(mockMovieInfo)
+      })
+      wrapper.instance().resetMovies()
+      await expect(mockAddMovies).toHaveBeenCalled()
     })
   })
 });
