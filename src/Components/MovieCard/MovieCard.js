@@ -104,6 +104,9 @@ export class MovieCard extends Component {
           <img src={this.props.poster_path} alt="movie poster" />
         </div>
         <h1 className="movie-info">{this.props.title}</h1>
+        <p className="movie-body">{this.props.release_date}</p>
+        <p className="movie-body">{this.props.vote_average}</p>
+        <p className="movie-body">{this.props.overview}</p>
       </div>
     );
   }
