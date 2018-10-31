@@ -135,21 +135,23 @@ describe('MovieContainer', () => {
     const mockFilterAction = filterMovies(mockMovies)
     const mockAddAction = addMovies(mockMovieInfo)
     const mockClearAction = clearMovies()
+    let mappedProps;
+
+    beforeEach(() => {
+      mappedProps = mapDispatchToProps(mockDispatch)
+    })
 
     it('should call dispatch with a filterMovies action when updateMovies is called', () => {
-      const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.updateMovies(mockMovies)
       expect(mockDispatch).toHaveBeenCalledWith(mockFilterAction)
     })
 
     it('should call dispatch with an addMovies action when addMovies is called', () => {
-      const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.addMovies(mockMovieInfo)
       expect(mockDispatch).toHaveBeenCalledWith(mockAddAction)
     })
 
     it('should call dispatch with a clearMovies action when clearMovies is called', () => {
-      const mappedProps = mapDispatchToProps(mockDispatch)
       mappedProps.clearMovies()
       expect(mockDispatch).toHaveBeenCalledWith(mockClearAction)
     })

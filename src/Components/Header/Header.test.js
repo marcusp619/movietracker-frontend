@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Header, mapStateToProps, mapDispatchToProps } from './Header';
+import { signOutUser } from '../../Actions/user-actions';
 import { shallow } from 'enzyme';
 
 describe('Header Component', () => {
@@ -13,13 +14,16 @@ describe('Header Component', () => {
   };
   const mockSignOutUser = jest.fn();
 
-  it('should match the snapshot', () => {
+  beforeEach(() => {
     wrapper = shallow(
       <Header
         user={mockUser}
         signOutUser={mockSignOutUser}
       />
     )
+  })
+
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
@@ -41,7 +45,13 @@ describe('Header Component', () => {
   })
 
   describe('mapDispatchToProps function', () => {
-
+    it('should call dispatch with a signOutUser action when signOutUser is called', () => {
+      const mockDispatch = jest.fn()
+      const mockDispatchAction = signOutUser(mockUser)
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.signOutUser(mockUser)
+      expect(mockDispatch).toHaveBeenCalledWith(mockDispatchAction)
+    })
   })
 
 })
