@@ -24,13 +24,6 @@ export class App extends Component {
         <Route exact path="/favorites" render={() => <MovieContainer />} />
         <Route exact path="/" render component={MovieContainer} />
         <Route exact path="/login" render={() => <UserLoginForm />} />
-        {/* <Route
-          exact
-          path="/"
-          render={() =>
-            !this.props.user ? <Redirect to="/login" /> : <MovieContainer />
-          }
-        /> */}
         <Route
           exact
           path="/login"

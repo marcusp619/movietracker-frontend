@@ -1,8 +1,24 @@
 .favorites-btn,
 .home-btn {
-  color: #c72931;
+  color: #00858e;
   font-weight: bold;
   text-decoration: none;
+}
+
+.favorites-btn:hover,
+.home-btn:hover {
+  color: #000;
+}
+
+.nav-btn-container:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ecf0ef),
+    to(#066168)
+  );
+  color: #000;
 }
 
 .movie-container {
@@ -21,8 +37,8 @@
 
 .nav-btn-container {
   align-items: center;
-  background-color: rgba(190, 180, 126, 0.8);
-  border: solid 2px #c72931;
+  /*background-color: rgba(190, 180, 126, 0.8);*/
+  border: solid 2px #00858e;
   display: flex;
   font-size: 1.5em;
   height: 30px;
