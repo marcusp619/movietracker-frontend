@@ -73,7 +73,6 @@ describe("Movie Reducer", () => {
     });
 
     it("should sign in a user in state", () => {
-      const mockState = {};
       const mockUser = {
         name: "Tony Stark",
         id: 12,
@@ -108,7 +107,6 @@ describe("Movie Reducer", () => {
           }
         ]
       };
-      const mockState = [mockUser];
       const mockAction = UserActions.signOutUser(mockUser);
       const expected = {};
 
