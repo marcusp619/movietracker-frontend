@@ -54,7 +54,7 @@ export const getFavorites = async userId => {
 
 export const removeFavorite = async favInfo => {
   try {
-    const response = await fetch(
+    await fetch(
       `http://localhost:3000/api/users/${favInfo.user_id}/favorites/${
         favInfo.movie_id
       }`,
