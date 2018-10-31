@@ -7,10 +7,6 @@ import "./MovieContainer.css";
 import MovieCard from "../../Components/MovieCard/MovieCard";
 
 export class MovieContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   resetMovies = async () => {
     const movieInfo = await DataCleaner.cleanMovieData();
     this.props.clearMovies();
