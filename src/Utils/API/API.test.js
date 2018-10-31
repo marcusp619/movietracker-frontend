@@ -46,9 +46,12 @@ describe('API', () => {
   })
 
   describe('checkUser function', () => {
-    it.skip('should throw an error if there is no userInfo', async () => {
-      API.checkUser({})
-      await expect(() => {API.checkUser({})}).toThrow("No userInfo!");
+    xit('should throw an error if there is no userInfo', async () => {
+      // API.checkUser.mockImplementation(() => {
+      //   throw Error("No userInfo!");
+      // });
+      await API.checkUser()
+      expect(API.checkUser).toThrowError("No userInfo!");
     })
 
     it('should fire the fetch call if there is userInfo', async () => {

@@ -48,6 +48,7 @@ describe('MovieCard', () => {
       API.removeFavorite = jest.fn()
       let mockUser = { id: 7 }
       let newWrapper = shallow(<MovieCard key={1} {...mockMovie} user={mockUser} />)
+      newWrapper.instance().toggleFavoriteInState = jest.fn()
       newWrapper.instance().setState({ favorite: true })
       newWrapper.instance().handleFavorite(mockMovie)
       expect(API.removeFavorite).toHaveBeenCalled()

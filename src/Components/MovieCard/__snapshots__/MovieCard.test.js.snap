@@ -33,20 +33,9 @@ ShallowWrapper {
           alt="movie poster"
           src="/something.jpg"
         />,
-        <h1
-          className="movie-title"
-        >
+        <h1>
           MOVIE
         </h1>,
-        <p
-          className="movie-info"
-        />,
-        <p
-          className="movie-info"
-        />,
-        <p
-          className="movie-info"
-        />,
       ],
       "className": "movie-card",
     },
@@ -84,47 +73,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "MOVIE",
-          "className": "movie-title",
         },
         "ref": null,
         "rendered": "MOVIE",
         "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "movie-info",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "movie-info",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "movie-info",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
       },
     ],
     "type": "div",
@@ -146,20 +98,9 @@ ShallowWrapper {
             alt="movie poster"
             src="/something.jpg"
           />,
-          <h1
-            className="movie-title"
-          >
+          <h1>
             MOVIE
           </h1>,
-          <p
-            className="movie-info"
-          />,
-          <p
-            className="movie-info"
-          />,
-          <p
-            className="movie-info"
-          />,
         ],
         "className": "movie-card",
       },
@@ -197,47 +138,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "MOVIE",
-            "className": "movie-title",
           },
           "ref": null,
           "rendered": "MOVIE",
           "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "movie-info",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "movie-info",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "movie-info",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
         },
       ],
       "type": "div",
