@@ -104,4 +104,32 @@ describe('MovieContainer', () => {
       await expect(mockAddMovies).toHaveBeenCalled()
     })
   })
+
+  describe('mapStateToProps function', () => {
+    it('should return an object with a user and a movies array', () => {
+      const mockState = {
+        movies: [
+          {title: 'Coco', vote_average: 7.6, favorite: true},
+          {title: 'Inception', vote_average: 8.6, favorite: true},
+          {title: 'Hunt for Red October', vote_average: 4.6, favorite: true}
+        ],
+        user: {name: 'Louisa', email: 'blah@gmail.com'},
+        favorites: []
+      }
+      const expected = {
+        user: {name: 'Louisa', email: 'blah@gmail.com'},
+        movies: [
+          {title: 'Coco', vote_average: 7.6, favorite: true},
+          {title: 'Inception', vote_average: 8.6, favorite: true},
+          {title: 'Hunt for Red October', vote_average: 4.6, favorite: true}
+        ],
+      }
+      const mappedProps = mapStateToProps(mockState)
+      expect(mappedProps).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps function', () => {
+
+  })
 });
