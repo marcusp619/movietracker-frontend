@@ -1,19 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {connect} from 'react-redux';
-import MovieCard from './MovieCard';
-import { shallow } from 'enzyme';
+import React from "react";
+import MovieCard from "./MovieCard";
+import { shallow } from "enzyme";
 
-describe('MovieCard', () => {
-  let wrapper
-  let mockMovie = { poster_path: '/something.jpg', title: 'MOVIE' }
-  const store = jest.fn()
-  
+describe("MovieCard", () => {
+  let wrapper;
+  let mockMovie = { poster_path: "/something.jpg", title: "MOVIE" };
+
   beforeEach(() => {
-    wrapper = shallow(<MovieCard key={1} {...mockMovie} />)
+    wrapper = shallow(<MovieCard key={1} {...mockMovie} />);
   });
 
-  it('should match the snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
+  it("should match the snapshot", () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

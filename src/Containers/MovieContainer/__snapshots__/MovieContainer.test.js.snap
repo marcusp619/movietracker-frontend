@@ -75,7 +75,6 @@ ShallowWrapper {
           render={[Function]}
         />,
       ],
-      "className": "movie-container",
     },
     "ref": null,
     "rendered": Array [
@@ -126,7 +125,6 @@ ShallowWrapper {
             render={[Function]}
           />,
         ],
-        "className": "movie-container",
       },
       "ref": null,
       "rendered": Array [

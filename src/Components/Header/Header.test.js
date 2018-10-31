@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './Header';
-import { shallow } from 'enzyme';
+import React from "react";
+import Header from "./Header";
+import { shallow } from "enzyme";
 
-describe('Header Component', () => {
+describe("Header Component", () => {
   let wrapper;
 
-  it('should match the snapshot', () => {
-    wrapper = shallow(<Header />)
-    expect(wrapper).toMatchSnapshot()
-  })
-
-})
+  it("should match the snapshot", () => {
+    wrapper = shallow(<Header />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
