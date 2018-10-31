@@ -4,12 +4,10 @@ exports[`MovieCard should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MovieCard
-    0={
-      Object {
-        "poster_path": "/something.jpg",
-        "title": "MOVIE",
-      }
-    }
+    favorite={false}
+    id={7}
+    poster_path="/something.jpg"
+    title="MOVIE"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,10 +31,13 @@ ShallowWrapper {
         />,
         <img
           alt="movie poster"
+          src="/something.jpg"
         />,
         <h1
           className="movie-title"
-        />,
+        >
+          MOVIE
+        </h1>,
         <p
           className="movie-info"
         />,
@@ -71,7 +72,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "movie poster",
-          "src": undefined,
+          "src": "/something.jpg",
         },
         "ref": null,
         "rendered": null,
@@ -82,11 +83,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "MOVIE",
           "className": "movie-title",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "MOVIE",
         "type": "h1",
       },
       Object {
@@ -143,10 +144,13 @@ ShallowWrapper {
           />,
           <img
             alt="movie poster"
+            src="/something.jpg"
           />,
           <h1
             className="movie-title"
-          />,
+          >
+            MOVIE
+          </h1>,
           <p
             className="movie-info"
           />,
@@ -181,7 +185,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "movie poster",
-            "src": undefined,
+            "src": "/something.jpg",
           },
           "ref": null,
           "rendered": null,
@@ -192,11 +196,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "MOVIE",
             "className": "movie-title",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "MOVIE",
           "type": "h1",
         },
         Object {
