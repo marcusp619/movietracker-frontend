@@ -10,7 +10,7 @@ import NewUserForm from "./Components/NewUserForm/NewUserForm";
 import UserLoginForm from "./Containers/UserLoginForm/UserLoginForm";
 import Header from "./Components/Header/Header";
 
-class App extends Component {
+export class App extends Component {
   async componentDidMount() {
     const movieInfo = await DataCleaner.cleanMovieData();
     this.props.addMovies(movieInfo);
@@ -43,11 +43,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   user: state.user
 });
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
   return {
     addMovies: movieInfo => {
       dispatch(addMovies(movieInfo));
